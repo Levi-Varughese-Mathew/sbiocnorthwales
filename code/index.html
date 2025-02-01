@@ -1,0 +1,160 @@
+<!-- Accessed on 21/01/25 from College -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+
+	<!-- Linking stylsheet -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<!-- Linkiing JS -->
+	<script src="script.js"></script>
+
+	 <!-- Hamburger Menu and social media icons -->
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+	<!-- Adding poppins font family (embedded from google fonts) -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+	<title>Home Page</title>
+</head>
+
+
+<body onresize="showContainer()">
+
+	<!-- To style the navigation menu and banner -->
+	<div class="header">
+
+		<!-- Banner with logo -->
+		<div id="banner">
+			<a id="logo" href="index.html">ST BEHANANS INDIAN ORTHODOX CHURCH <br>NORTH WALES</a>
+		</div>
+		
+		
+
+		<!-- Top Navigation Menu -->
+		<div class="topnav">
+			<!-- Navigation links (hidden by default) -->
+			<div id="myLinks">
+				<!-- Links to other pages -->
+				<a class="links" href="index.html">HOME</a>
+				<a class="links" href="about.html">ABOUT</a>
+				<a class="links" href="organisations.html">ORGANISATIONS</a>
+				<a class="links" href="gallery.html">GALLERY</a>
+				<a class="links" href="contact.html">CONTACT</a>
+			</div>
+			<!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			</a>
+		</div>
+
+		<!-- Navigation bar for bigger displays -->
+		<div class="navBar">
+			<ul>
+				<!-- Links to other pages -->
+				<li><a class="links" href="index.html">HOME</a></li>
+				<li><a href="about.html">ABOUT</a></li>
+				<li><a href="organisations.html">ORGANISATIONS</a></li>
+				<li><a href="gallery.html">GALLERY</a></li>
+				<li><a href="contact.html">CONTACT</a></li>
+			</ul>
+		</div>
+
+	</div>
+
+	<!--Container where all the information for the pages will go  -->
+	<div id="container">
+		
+		<h1>HOME PAGE</h1>
+		
+		<h2>Our Parish</h2>
+			<p>
+				Our parish St Behanans Indian Orthodox Church, North Wales, is under the UK-Europe and Africa 
+				Diocese of the Indian Orthodox Syrian Church under the spiritual leadership of H.H. Baselios 
+				Marthoma Mathews III. Our parish has close to registered families. Total members including family members are 
+				north of 70.Our parish members are from Llandudno, Colwyn Bay, Flint, Ruthin, Rhyl, Abergele, 
+				Chester and Wrexham.
+			</p> 
+
+			<br>
+
+		<!-- Div holding the service timing and location icon -->
+		<div class="service_location">
+			
+			<!-- Span holding the service timing -->
+			<span class="service">
+				<img src="media/index/churchIcon.png" alt="Location Icon" class="icon">
+				<span><h2>Service Timing</h2></span>
+				<span>
+					Holy Qurbana Every Second Saturday
+					Morning Prayer Starts at: 9:30 am 
+					Qurbana Starts at 10:30 am
+				</span>
+			</span>
+			
+			<!-- Span holding the location -->
+			<span class="location">
+				<span><img src="media/index/locationIcon.png" alt="Location Icon" class="icon"></span>
+				<span><h2>Location</h2></span>
+				<span>
+					Ffordd Dwyfor, Llandudno LL30 1EN
+				</span>
+
+			</span>
+			
+		</div>
+
+		<br>
+		<h2 class="center">Church Organisations</h2><br>
+		
+		<!-- Image links to organisations page (other organisations) -->
+		<div class="index_organisations">
+			<a href="organisations.html#ocym"><img src=media/orgLogo/ocym.jpg alt="OCYM" class="orgImage enlarge"></a>
+			<a href="organisations.html#mmvs"><img src=media/orgLogo/mmvs.jpg alt="MMVS" class="orgImage enlarge"></a>
+			<a href="organisations.html#sundaySchool"><img src=media/orgLogo/sundaySchool.jpg alt="Sunday School " class="orgImage enlarge"></a>
+		</div>	
+
+		<br><br>
+
+
+		
+			
+	</div>	
+	<!-- Holds other division within the footer -->
+	<div class="footer">
+
+		<div class="subFooter">
+			<div class="otherLinks">
+				<a href="files/sitemap.pdf" target="_blank">Site Map</a><br>
+				<a href="files/termsOfService.pdf" target="_blank">Terms of Service</a><br>
+				<a href="files/accessibilityStatement.pdf" target="_blank">Accessibility Statement</a><br>
+				<a href="mailto:levivarghesmathew@gmail.com" target="_blank">example@gmail.com</a><br>
+				<p id="otherLinks">Ffordd Dwyfor, Llandudno LL30 1EN<br></p>			
+			</div>
+
+			<div id="bannerFooter">
+				<a id="logoFooter" href="index.html">CHURCH LOGO</a>
+			</div>
+			
+			<!-- Division for the social media handles -->
+			<div class="socialMediaIcons">
+				<a href="https://www.facebook.com/colegllandrillo/?locale=en_GB" class="fa fa-facebook" target="_blank"></a>
+				<a href="https://twitter.com/colegllandrillo" class="fa fa-twitter" target="_blank"></a>
+				<a href="https://www.instagram.com/coleg_llandrillo/" class="fa fa-instagram" target="_blank"></a>
+				<a href="https://uk.linkedin.com/company/grwpllandrillomenai?trk=public_profile_topcard-current-company" class="fa fa-linkedin" target="_blank"></a>
+			</div>	
+		</div>
+		
+	</div>
+
+	
+</body>
+
+</html>
+
