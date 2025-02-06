@@ -21,6 +21,7 @@ html,body{
 		
 	}
 
+	/* To float items to the right */
 	.float-right {
 		float: right;
 		margin-left: 20px; /* Adjust the margin as needed */
@@ -34,6 +35,7 @@ html,body{
 		margin: 10px;
 	}
 
+	/* Contain elements within */
 	.clearfix::after {
 		content: "";
 		clear: both;
@@ -48,6 +50,7 @@ html,body{
 		margin: auto; /* To make the div center since width is only 80% */
 	}
 
+	/* To align the elements in the division (service timing and location) */
 	span.service, span.location{
 		/* border: #000000 2px solid; */
         /* border-radius: 10px; */
