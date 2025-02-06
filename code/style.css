@@ -354,7 +354,7 @@ html,body{
 
 	
 	/* Styling for mobile display (structural heirarchy) */
-	
+
 	body{
 		min-width: 300px;
 	}
@@ -363,7 +363,6 @@ html,body{
 	div.header{
 		display: flex;
 		flex-wrap: wrap;
-		/* justify-content: center; */
 		flex-direction: column;
 		align-content: flex-start;
 		padding-left: 4px;
@@ -376,12 +375,13 @@ html,body{
 		color: #ffffff;
 		font-size: 1.63em;
 		margin-bottom: auto;
+		background-color: #AD0000;
 	}
 
 	#banner {
 		display: flex;
 		margin:auto;
-		height: 50px;
+		/* height: 50px; */
 		padding-top:0px;
 		justify-content: center;
 		align-items: center;
@@ -549,7 +549,7 @@ html,body{
 	}
 
 	a {
-		background-color: #AD0000;
+		background-color: inherit;
 		color: rgb(255, 255, 255);
 		text-decoration: none;
 	}
