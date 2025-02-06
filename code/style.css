@@ -354,6 +354,7 @@ html,body{
 
 	
 	/* Styling for mobile display (structural heirarchy) */
+	
 	body{
 		min-width: 300px;
 	}
