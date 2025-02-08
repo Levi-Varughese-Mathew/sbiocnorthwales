@@ -398,6 +398,31 @@ html,body{
 		margin-right: 4px;
 	}
 
+	/* To align elements in the division (service timing and location) */
+	div.service_location{
+		display: flex;
+		justify-content: space-around;
+		/* width: 80%; */
+		margin: auto; /* To make the div center since width is only 80% */
+	}
+
+	/* For the icons used in home page */
+	img.icon{
+		height: auto;
+		margin: 10px;
+	}
+
+	/* To align the elements in the division (service timing and location) */
+	span.service, span.location{
+        padding: 2px;
+        width: 30%;
+        display: flex;
+        text-align: center;
+        flex-direction: column;
+        align-content: flex-start;
+        align-items: center;
+	}
+
 	/* Style the navigation menu */
 	.topnav {
 		overflow: hidden;
