@@ -92,11 +92,6 @@ html,body{
 	}
 
 	.index_organisations img{
-		/* width: 35%; */
-		/* height: auto; */
-		/* margin-left: 10%; */
-		/* margin-bottom: 30px; */
-		/* margin: auto; */
 		object-fit: contain;
 		background-color: rgb(255, 255, 255); /*Just for visual purpose during initial designing*/
 		transition: transform .2s;
@@ -422,6 +417,25 @@ html,body{
         align-content: flex-start;
         align-items: center;
 	}
+
+	/* Class to layout the organisations image */
+	.index_organisations{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		align-items: center;
+
+	}
+
+	.index_organisations img{
+		object-fit: contain;
+		background-color: rgb(255, 255, 255); /*Just for visual purpose during initial designing*/
+		transition: transform .2s;
+		border-radius: 10px;
+		border: 2px solid black;
+		z-index: 4;
+	}
+
 
 	/* Style the navigation menu */
 	.topnav {
