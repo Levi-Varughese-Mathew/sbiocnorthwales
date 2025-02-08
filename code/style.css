@@ -415,7 +415,7 @@ html,body{
 	/* To align the elements in the division (service timing and location) */
 	span.service, span.location{
         padding: 2px;
-        width: 30%;
+        width: 100%;
         display: flex;
         text-align: center;
         flex-direction: column;
