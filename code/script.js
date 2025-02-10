@@ -1,39 +1,36 @@
-/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
- var pic4x4 = "pic";
- var picConvertible = "pic";
- var picCoupe = "pic";
- var picHatchback = "pic";
- var picMPV = "pic";
- var picPickup = "pic";
- var picSedan = "pic";
- var picSUV = "pic";
-
-
-function myFunction() {
-    var x = document.getElementById("myLinks");
-    var y = document.getElementById("container");
-    var z = document.getElementById("banner")
+// Function to display the hamburger menu when icon is clicked
+function menuFunction() {
+    var menu = document.getElementById("myLinks");
+    var mainContainer = document.getElementById("container");
+    var btnOpen = document.getElementById("btnOpenMenu");
+    var btnClose = document.getElementById("btnCloseMenu");
     
-    if (x.style.display == "block" ) {
-      x.style.display = "none";
-      y.style.display = "block";
-      // z.style.display = "flex";
+    
+    if (menu.style.display == "block" ) {
+      menu.style.display = "none";
+      mainContainer.style.display = "block";
+      btnClose.style.display = "none"; //Displays the menu icon when the menu is open
+      btnOpen.style.display = "inline-block"; // Hides the close icon when the menu is open
+      
       
     } else {
-      x.style.display = "block";
-      y.style.display = "none";
-      x.style.position = "absolute";
-      x.style.width = "100%";
-      x.style.marginleft = "-10px"
+      menu.style.display = "block";
+      mainContainer.style.display = "none";
+      btnOpen.style.display = "none"; // Hides the menu icon when the menu is open
+      btnClose.style.display = "inline-block"; // Shows the close icon when the menu is open
+      // menu.style.position = "absolute";
+      menu.style.width = "100%";
+      menu.style.height = "70vh";
+      // menu.style.marginleft = "-10pmenu"
     }
   }
 
-// To show the container and hide the hamburger navigation menu when the 
+// To show the container and hide the hamburger navigation menu when the window is resized
   function showContainer() {
-    var x = document.getElementById("myLinks");
-    var y = document.getElementById("container");
-    x.style.display = "none";
-    y.style.display = "block";
+    var menu = document.getElementById("myLinks");
+    var mainContainer = document.getElementById("container");
+    menu.style.display = "none";
+    mainContainer.style.display = "block";
   }
 
 // Function to show information when image is clicked for each car type
@@ -43,101 +40,101 @@ function myFunction() {
     //console.log(source)
    
     
-    if (source == "4x4Pic" && pic4x4 =="pic"){
+    if (source == "4menu4Pic" && pic4menu4 =="pic"){
       var image = document.getElementById("button1"); 
-      image.src = "images/index/info/4x4.png";  
-      pic4x4="text";    
+      image.src = "images/indemenu/info/4menu4.png";  
+      pic4menu4="temenut";    
     } 
     
-    else if (pic4x4="text"){
+    else if (pic4menu4="temenut"){
       var image = document.getElementById("button1"); 
-      image.src = "images/index/4x4.png";
-      pic4x4="pic";
+      image.src = "images/indemenu/4menu4.png";
+      pic4menu4="pic";
     }
 
     
     if (source == "convertiblePic" && picConvertible =="pic"){
       var image = document.getElementById("button2"); 
       console.log("Hai")
-      image.src = "images/index/info/convertible.png";
-      picConvertible="text";
+      image.src = "images/indemenu/info/convertible.png";
+      picConvertible="temenut";
       
     } 
     
-    else if (picConvertible="text") {
+    else if (picConvertible="temenut") {
       var image = document.getElementById("button2"); 
-      image.src = "images/index/convertible.png";
+      image.src = "images/indemenu/convertible.png";
       picConvertible="pic";
     }
 
    
     if (source == "coupePic" && picCoupe =="pic"){
       var image = document.getElementById("button3"); 
-      image.src = "images/index/info/coupe.png";
-      picCoupe="text";
+      image.src = "images/indemenu/info/coupe.png";
+      picCoupe="temenut";
       
     } 
     
-    else if (picCoupe="text") {
+    else if (picCoupe="temenut") {
       var image = document.getElementById("button3"); 
-      image.src = "images/index/coupe.png";
+      image.src = "images/indemenu/coupe.png";
       picCoupe="pic";
     }
 
     
     if (source == "hatchbackPic" && picHatchback =="pic"){
       var image = document.getElementById("button4"); 
-      picHatchback="text";
-      image.src = "images/index/info/hatchback.png";
+      picHatchback="temenut";
+      image.src = "images/indemenu/info/hatchback.png";
       
-    } else if (picHatchback="text"){
+    } else if (picHatchback="temenut"){
       var image = document.getElementById("button4"); 
-      image.src = "images/index/hatchback.png";
+      image.src = "images/indemenu/hatchback.png";
       picHatchback="pic";
     }
 
     
     if (source == "mpvPic" && picMPV =="pic"){
       var image = document.getElementById("button5"); 
-      picMPV="text";
-      image.src = "images/index/info/mpv.png";
+      picMPV="temenut";
+      image.src = "images/indemenu/info/mpv.png";
       
-    } else if (picMPV="text") {
+    } else if (picMPV="temenut") {
       var image = document.getElementById("button5"); 
-      image.src = "images/index/mpv.png";
+      image.src = "images/indemenu/mpv.png";
       picMPV="pic";
     }
 
     if (source == "pickupPic" && picPickup =="pic"){
       var image = document.getElementById("button6"); 
-      picPickup="text";
-      image.src = "images/index/info/pickup.png";
+      picPickup="temenut";
+      image.src = "images/indemenu/info/pickup.png";
       
-    } else if (picPickup="text") {
+    } else if (picPickup="temenut") {
       var image = document.getElementById("button6"); 
-      image.src = "images/index/pickup.png";
+      image.src = "images/indemenu/pickup.png";
       picPickup="pic";
     }
 
     if (source == "sedanPic" && picSedan =="pic"){
       var image = document.getElementById("button7"); 
-      picSedan="text";
-      image.src = "images/index/info/sedan.png";
+      picSedan="temenut";
+      image.src = "images/indemenu/info/sedan.png";
       
-    } else if (picSedan="text") {
+    } else if (picSedan="temenut") {
       var image = document.getElementById("button7"); 
-      image.src = "images/index/sedan.png";
+      image.src = "images/indemenu/sedan.png";
       picSedan="pic";
     }
 
     if (source == "suvPic" && picSUV =="pic"){
       var image = document.getElementById("button8"); 
-      picSUV="text";
-      image.src = "images/index/info/suv.png";
+      picSUV="temenut";
+      image.src = "images/indemenu/info/suv.png";
       
-    } else if (picSUV="text"){
+    } else if (picSUV="temenut"){
       var image = document.getElementById("button8"); 
-      image.src = "images/index/suv.png";
+      image.src = "images/indemenu/suv.png";
       picSUV="pic";
     }
 

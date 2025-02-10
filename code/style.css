@@ -112,7 +112,7 @@ html,body{
 		display: none;
 	}
 
-	/* Hamburger menu icon */
+	/* Hiding menu and close icons */
 	span.material-symbols-outlined{
 		display: none;
 	}
@@ -341,7 +341,7 @@ html,body{
 		display: none;
 	}
 
-	/* TO hide the banner in the footer which will be only displayed in bigger display */
+	/* To hide the banner in the footer which will be only displayed in bigger display */
 	#bannerFooter {
 		display: none;
 	}
@@ -355,13 +355,21 @@ html,body{
 	/* Header styling */
 	div.header{
 		display: flex;
-		flex-wrap: wrap;
-		flex-direction: column;
-		align-content: flex-start;
-		padding-left: 4px;
-		background-color: #AD0000;
+        flex-wrap: nowrap;
+        padding-left: 4px;
+		padding-right: 4px;
+        background-color: #AD0000;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: start;
 	}
 
+	
+	.material-symbols-outlined {
+		background-color: inherit;
+		color: white;
+	}
+	
 	/* To make the logo a link to the homepage */
 	a#logo{
 		font-family: 'Poppins','Arial';
@@ -380,6 +388,11 @@ html,body{
 		align-items: center;
 		font-family: 'Poppins','Arial';
 		/* font-size: 250%; */
+	}
+
+	/* Hamburger menu close icon */
+	#btnCloseMenu{
+		display: none;
 	}
 
 	#container {
@@ -461,6 +474,7 @@ html,body{
 		font-size: 100%;
 		display: block;
 		z-index: 1;		
+		text-align: center;
 	}
 	
 	/* Style the hamburger menu */
@@ -485,6 +499,17 @@ html,body{
 		background-color: #AD0000;
 		margin: auto;
 		/* margin-bottom: -5px;  */
+	}
+
+	/* Subfooter (contains footer content) */
+	div.subFooter {
+		box-sizing: border-box;
+		width: 100%;
+		max-width: 1100px;
+		background-color: inherit;
+		/* margin: auto; */
+		margin-bottom: 10px;
+
 	}
 
 	/* Style all font awesome icons */

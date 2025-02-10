@@ -19,39 +19,34 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
+	<!-- For material symbols and icons-->
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+	
 	<title>Organisations</title>
 </head>
 
 
 <body onresize="showContainer()">
 
+	<!-- To style the navigation menu and banner -->
 	<div class="header">
 
 		<!-- Banner with logo -->
 		<div id="banner">
 			<a id="logo" href="index.html">ST BEHANANS INDIAN ORTHODOX CHURCH <br>NORTH WALES</a>
 		</div>
-		
-		
 
-		<!-- Top Navigation Menu -->
-		<div class="topnav">
-			<!-- Navigation links (hidden by default) -->
-			<div id="myLinks">
-				<!-- Links to other pages -->
-				<a class="links" href="index.html">HOME</a>
-				<a class="links" href="about.html">ABOUT</a>
-				<a class="links" href="organisations.html">ORGANISATIONS</a>
-				<a class="links" href="gallery.html">GALLERY</a>
-				<a class="links" href="contact.html">CONTACT</a>
-			</div>
-			<!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
-			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-				<i class="fa fa-bars"></i>
-			</a>
-		</div>
+		<!-- Menu icon -->
+		<span id="btnOpenMenu" class="material-symbols-outlined" onclick="menuFunction()">
+			menu
+		</span> 
 
-		<!-- Navigation bar for bigger displays -->
+		<!-- Close menu icon -->
+		<span id="btnCloseMenu" class="material-symbols-outlined" onclick="menuFunction()">
+			close
+		</span> 
+
+		<!-- Navigation bar for wider displays -->
 		<div class="navBar">
 			<ul>
 				<!-- Links to other pages -->
@@ -63,6 +58,19 @@
 			</ul>
 		</div>
 
+	</div>
+
+	<!-- Hamburger Menu -->
+	<div class="topnav">
+		<!-- Navigation links (hidden by default) -->
+		<div id="myLinks">
+			<!-- Links to other pages -->
+			<a class="links" href="index.html">HOME</a>
+			<a class="links" href="about.html">ABOUT</a>
+			<a class="links" href="organisations.html">ORGANISATIONS</a>
+			<a class="links" href="gallery.html">GALLERY</a>
+			<a class="links" href="contact.html">CONTACT</a>
+		</div>		
 	</div>
 
 	
