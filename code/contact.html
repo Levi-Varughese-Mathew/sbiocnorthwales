@@ -76,10 +76,49 @@
 	<!--Container where all the information for the pages will go  -->
 	<div id="container">
 		
-		<h1>CONTACT US</h1>
+		<!-- <h1>CONTACT US</h1> -->
 
-		<!-- For trial spacing -->
-		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<!-- Template form used -->
+		<section class="contact-section">
+			<div class="contact-intro">
+			  <h2 class="contact-title">Get in Touch</h2>
+			  <p class="contact-description">
+				Fill out the form below and we'll get back to you as soon as possible.
+			  </p>
+			</div>
+		  
+			<form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+			  <input type="hidden" name="access_key" value="6c8aca82-3f72-4554-8a66-b8e5c67a3fde" />
+			  <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
+			  <input type="hidden" name="from_name" value="My Website" />
+			  <!-- More customisation options available in the docs: https://docs.web3forms.com -->
+			
+			  <!-- Added to redirect after submission -->
+			  <input type="hidden" name="redirect" value="https://levi-varughese-mathew.github.io/sbiocnorthwales/code/contact.html" />
+
+			  <div class="form-group-container">
+				<div class="form-group">
+				  <label for="name" class="form-label">Name</label>
+				  <input id="name" name="name" class="form-input" placeholder="Your name" type="text" />
+				</div>
+				<div class="form-group">
+				  <label for="email" class="form-label">Email</label>
+				  <input id="email" name="email" class="form-input" placeholder="Your email" type="email" />
+				</div>
+				<div class="form-group">
+				  <label for="phone" class="form-label">Phone</label>
+				  <input id="phone" name="phone" class="form-input" placeholder="+44 56789 98765" type="text" />
+				</div>
+				<div class="form-group">
+				  <label for="message" class="form-label">Message</label>
+				  <textarea class="form-textarea" id="message" name="message" placeholder="Your message"></textarea>
+				</div>
+			  </div>
+			  <button class="form-submit" type="submit">Send Message</button>
+			</form>
+		  
+		  </section>
 			
 	</div>	
 
