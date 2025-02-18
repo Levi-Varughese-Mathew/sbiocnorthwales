@@ -33,115 +33,47 @@ function menuFunction() {
     mainContainer.style.display = "block";
   }
 
-// Function to show information when image is clicked for each car type
-  function showInfo(source){
-    
-    //console.log("Function Called")
-    //console.log(source)
-   
-    
-    if (source == "4menu4Pic" && pic4menu4 =="pic"){
-      var image = document.getElementById("button1"); 
-      image.src = "images/indemenu/info/4menu4.png";  
-      pic4menu4="temenut";    
-    } 
-    
-    else if (pic4menu4="temenut"){
-      var image = document.getElementById("button1"); 
-      image.src = "images/indemenu/4menu4.png";
-      pic4menu4="pic";
-    }
+//JS used for lightbox
+// Open the Modal
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
 
-    
-    if (source == "convertiblePic" && picConvertible =="pic"){
-      var image = document.getElementById("button2"); 
-      console.log("Hai")
-      image.src = "images/indemenu/info/convertible.png";
-      picConvertible="temenut";
-      
-    } 
-    
-    else if (picConvertible="temenut") {
-      var image = document.getElementById("button2"); 
-      image.src = "images/indemenu/convertible.png";
-      picConvertible="pic";
-    }
+// Close the Modal
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
 
-   
-    if (source == "coupePic" && picCoupe =="pic"){
-      var image = document.getElementById("button3"); 
-      image.src = "images/indemenu/info/coupe.png";
-      picCoupe="temenut";
-      
-    } 
-    
-    else if (picCoupe="temenut") {
-      var image = document.getElementById("button3"); 
-      image.src = "images/indemenu/coupe.png";
-      picCoupe="pic";
-    }
+var slideIndex = 1;
+showSlides(slideIndex);
 
-    
-    if (source == "hatchbackPic" && picHatchback =="pic"){
-      var image = document.getElementById("button4"); 
-      picHatchback="temenut";
-      image.src = "images/indemenu/info/hatchback.png";
-      
-    } else if (picHatchback="temenut"){
-      var image = document.getElementById("button4"); 
-      image.src = "images/indemenu/hatchback.png";
-      picHatchback="pic";
-    }
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-    
-    if (source == "mpvPic" && picMPV =="pic"){
-      var image = document.getElementById("button5"); 
-      picMPV="temenut";
-      image.src = "images/indemenu/info/mpv.png";
-      
-    } else if (picMPV="temenut") {
-      var image = document.getElementById("button5"); 
-      image.src = "images/indemenu/mpv.png";
-      picMPV="pic";
-    }
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-    if (source == "pickupPic" && picPickup =="pic"){
-      var image = document.getElementById("button6"); 
-      picPickup="temenut";
-      image.src = "images/indemenu/info/pickup.png";
-      
-    } else if (picPickup="temenut") {
-      var image = document.getElementById("button6"); 
-      image.src = "images/indemenu/pickup.png";
-      picPickup="pic";
-    }
-
-    if (source == "sedanPic" && picSedan =="pic"){
-      var image = document.getElementById("button7"); 
-      picSedan="temenut";
-      image.src = "images/indemenu/info/sedan.png";
-      
-    } else if (picSedan="temenut") {
-      var image = document.getElementById("button7"); 
-      image.src = "images/indemenu/sedan.png";
-      picSedan="pic";
-    }
-
-    if (source == "suvPic" && picSUV =="pic"){
-      var image = document.getElementById("button8"); 
-      picSUV="temenut";
-      image.src = "images/indemenu/info/suv.png";
-      
-    } else if (picSUV="temenut"){
-      var image = document.getElementById("button8"); 
-      image.src = "images/indemenu/suv.png";
-      picSUV="pic";
-    }
-
-    else{
-      console.log("Nice Try")
-    }
-
-
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "flex";
+  // slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
 
