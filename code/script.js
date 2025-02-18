@@ -5,7 +5,7 @@ function menuFunction() {
     var btnOpen = document.getElementById("btnOpenMenu");
     var btnClose = document.getElementById("btnCloseMenu");
     
-    
+    // If the menu is open, close it. If it is closed, open it
     if (menu.style.display == "block" ) {
       menu.style.display = "none";
       mainContainer.style.display = "block";
@@ -13,7 +13,9 @@ function menuFunction() {
       btnOpen.style.display = "inline-block"; // Hides the close icon when the menu is open
       
       
-    } else {
+    } 
+    // If the menu is closed, open it
+    else {
       menu.style.display = "block";
       mainContainer.style.display = "none";
       btnOpen.style.display = "none"; // Hides the menu icon when the menu is open
@@ -27,10 +29,29 @@ function menuFunction() {
 
 // To show the container and hide the hamburger navigation menu when the window is resized
   function showContainer() {
+    var navBar = document.getElementById("navBar");
     var menu = document.getElementById("myLinks");
     var mainContainer = document.getElementById("container");
+
+    var btnOpen = document.getElementById("btnOpenMenu");
+    var btnClose = document.getElementById("btnCloseMenu");
+
+    // Hiding the menu when the window is resized
     menu.style.display = "none";
+    
+    // Showing main container when the window is resized
     mainContainer.style.display = "block";
+    
+    //Showing the btnOpenMenu when the window is resized and page is in mobile view. Done by checking if navigation bar is visible or not
+    if (window.getComputedStyle(navBar).display == "none") {
+      // console.log("Navbar is hidden");
+      btnOpen.style.display = "inline-block";
+      btnClose.style.display = "none";
+    } else {
+      // console.log("Navbar is visible");
+      btnOpen.style.display = "none";
+      btnClose.style.display = "none";
+    }    
   }
 
 //JS used for lightbox
