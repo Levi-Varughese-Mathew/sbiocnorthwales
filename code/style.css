@@ -20,7 +20,31 @@ html,body{
 		justify-content: center;
 		flex-direction: column;
 		background-image: url("media/bannerImage.jpeg");
-		
+	}
+
+	/* div.main-banner{
+		display: flex;
+		align-items: center;
+		background-image: url("media/bannerImage.jpeg");
+	}
+
+	div.header-logo{
+		width: 15%;
+		height: auto;
+		background: transparent;
+		height: inherit;
+	}
+
+	img#logo{
+		width: 100%;
+		background: transparent;
+		border-radius: 50%;
+		border: #000000 2px solid;
+	} */
+
+	#banner img#logo{
+		width: 15%;
+		background: transparent;
 		
 	}
 
@@ -130,7 +154,7 @@ html,body{
 	/* banner styling to be shown on the top of each page */
 	#banner {
 		display: flex;
-		flex-wrap: wrap;
+		flex-wrap: nowrap;
 		justify-content: center;
 		align-items: center;
 		margin:auto;
@@ -138,7 +162,6 @@ html,body{
 		height: 350px;
 		padding:5px;
 		padding-top:0px;		
-
 		background-color: transparent;
 	}
 
