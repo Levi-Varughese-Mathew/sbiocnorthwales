@@ -5,11 +5,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
 
-	<!-- Linking stylsheet -->
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- Linking stylesheet -->
+	<link rel="stylesheet" type="text/css" href="../style.css">
 
-	<!-- Linkiing JS -->
-	<script src="script.js"></script>
+	<!-- Linking JS -->
+	<script src="../script.js"></script>
 
 	 <!-- Hamburger Menu and social media icons -->
 	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
@@ -47,24 +47,27 @@
 		</span> 
 
 		<!-- Navigation bar for wider displays -->
-		<div id="navBar"  class="navBar">
+		<div id="navBar" class="navBar">
 			<ul>
 				<!-- Links to other pages -->
-				<li><a class="links" href="index.html">HOME</a></li>
+				<li><a class="links" href="../index.html">HOME</a></li>
+				<!-- <li><a href="about.html">ABOUT</a></li> -->
 				<div class="dropdown">
 					<button class="dropbtn">
 						ABOUT<span class="material-symbols-outlined drop_down">arrow_drop_down</span>
 					</button>
 						<div class="dropdown-content">
-							<a href="about.html#Church">Church</a>
-							<a href="about.html#Church">Parish</a>
-							<a href="about.html#Diocese">Diocese</a>
-							<a href="about.html#Church">Official Bearers</a>
+							<a href="church.html">Church</a>
+							<a href="parish.html">Parish</a>
+							<a href="diocese.html">Diocese</a>
+							<a href="officeBearers.html">Office Bearers</a>
 						</div>
 				</div>
-				<li><a href="organisations.html">ORGANISATIONS</a></li>
-				<li><a href="gallery.html">GALLERY</a></li>
-				<li><a href="contact.html">CONTACT</a></li>
+
+				<!-- <li><a href="organisations.html">ORGANISATIONS</a></li> -->
+				<li><a href="../organisations.html">ORGANISATIONS</a></li>
+				<li><a href="../gallery.html">GALLERY</a></li>
+				<li><a href="../contact.html">CONTACT</a></li>
 			</ul>
 		</div>
 
@@ -75,59 +78,31 @@
 		<!-- Navigation links (hidden by default) -->
 		<div id="myLinks">
 			<!-- Links to other pages -->
-			<a class="links" href="index.html">HOME</a>
-			<a class="links" href="about.html">HOME</a>
-			
-			<a class="links" href="organisations.html">ORGANISATIONS</a>
-			<a class="links" href="gallery.html">GALLERY</a>
-			<a class="links" href="contact.html">CONTACT</a>
+			<a class="links" href="../index.html">HOME</a>
+			<!-- <a class="links" href="about.html">ABOUT</a> -->
+			<div class="dropdown">
+				<button class="dropbtn">
+					ABOUT<span class="material-symbols-outlined drop_down">arrow_drop_down</span>
+				</button>
+					<div class="dropdown-content">
+						<a href="church.html">Church</a>
+						<a href="parish.html">Parish</a>
+						<a href="diocese.html">Diocese</a>
+						<a href="officeBearers.html">Official Bearers</a>
+					</div>
+			</div>
+			<a class="links" href="../organisations.html">ORGANISATIONS</a>
+			<a class="links" href="../gallery.html">GALLERY</a>
+			<a class="links" href="../contact.html">CONTACT</a>
 		</div>		
 	</div>
 	
 	<!--Container where all the information for the pages will go  -->
 	<div id="container">
 		
-		<h1 class="center">ABOUT THE CHURCH</h1>
+		<h1 class="center">ABOUT THE DIOCESE</h1>
 
-		<!-- For trial spacing -->
-		<h2 id="Church">Church</h2>
-		<img src="media/about/devalokamAramana.jpg" alt="Church Head Office" class="float-right">
-			<p>
-				The Malankara Orthodox Syrian Church, also known as the Indian Orthodox Church, is one of the 
-				ancient Oriental Orthodox Churches, rooted in the apostolic traditions established by St. Thomas
-				the Apostle in A.D. 52. This historic Church, with a lineage spanning nearly two millennia, 
-				represents one of the oldest Christian communities in the world. Its headquarters is located in 
-				Devalokam, Kottayam, Kerala, South India.
-			</p>
-			<p>
-				As a member of the Oriental Orthodox communion, the Malankara Orthodox Syrian Church holds firmly to the 
-				teachings of the early Church and actively engages in ecumenical dialogue to foster Christian unity. It is 
-				also a founding member of the World Council of Churches and plays a vital role in the global Christian 
-				community. Its rich theological and spiritual heritage has significantly influenced the Christian faith and 
-				tradition.
-			</p>
-			<p>
-				The Church's global presence is marked by its numerous dioceses and parishes across continents, 
-				serving the spiritual needs of its faithful. Each diocese is committed to upholding the Church's 
-				apostolic mission through worship, education, community service, and ecumenical outreach, embodying
-				the timeless message of Christ's love and hope for all humanity.
-			</p>
-
-
-		<img src="media/about/metropolitans/baseliosMarthomaMathewsIII.png" alt="H.G Baselios Marthoma Mathews III" class="float-right">
-		<h2>Church Metropolitan</h2>
-			<p>
-				Baselios Marthoma Mathews III is the current Catholicos of the East and Malankara Metropolitan, 
-				primate of the Malankara Orthodox Syrian Church. He was enthroned as the 22nd Malankara
-				Metropolitan on October 14, 2021, and as the 9th Catholicos on October 15, 2021, at St. Peter
-				and St. Paul's Church, Parumala. He succeeded Baselios Marthoma Paulose II. His leadership 
-				guides the Church in its spiritual mission and engagement with contemporary issues. He is 
-				actively involved in promoting ecumenical dialogue and fostering interfaith relations. His 
-				tenure focuses on strengthening the Church's educational institutions and social outreach 
-				programs, continuing the service and community engagement tradition that characterises the 
-				Malankara Church.
-			</p>
-
+		
 		
 		<h2 id="Diocese">Diocese</h2>	
 			<p>
@@ -145,7 +120,7 @@
 				to the broader Christian witness through worship, service, and dialogue.
 			</p>
 
-		<img src="media/about/metropolitans/abrahamMarStephanos.png" alt="H.G Abraham Mar Stephanos" class="float-right">
+		<img src="../media/about/metropolitans/abrahamMarStephanos.png" alt="H.G Abraham Mar Stephanos" class="float-right">
 		<h2>Diocese Metropolitan</h2>
 		<p>
 			His Grace Abraham Mar Stephanos is the current Metropolitan of the UK-Europe and Africa Diocese of the 
@@ -186,38 +161,7 @@
 			to the broader Christian witness through worship, service, and dialogue.
 		</p>
 
-		<h2 id="Parish">Our Parish</h2>
-
-			<h3>St Behanans Indian Orthodox Church</h3>
-				<p>
-					The Church Father of St. Behanan's Indian Orthodox Church would be St. Behnam (Mar Behnam), after whom the church is named. St. Behnam is a 
-					venerated saint in the Syriac Christian tradition, including the Malankara Orthodox Syrian Church (Indian Orthodox Church), 
-					which has its roots in the Oriental Orthodox tradition.
-				</p>
-
-			<h3>Who is St. Behnam?</h3>
-				<p>
-					St. Behnam was a 4th-century prince from Assyria, who, along with his sister St. Sarah, converted to Christianity through the influence 
-					of St. Matthew the Hermit. After their conversion, they were martyred by their father, King Sinharib, for refusing to renounce their 
-					newfound Christian faith. St. Behnam is remembered as a martyr and a witness to Christ's teachings, and his story inspires faith and 
-					courage among Christians. He is venerated as a saint in the Syriac Christian tradition, particularly among the Assyrian Church of the East, 
-					the Syriac Orthodox Church, and the Chaldean Catholic Church. His feast day is celebrated on August 10th.
-				</p>
-
-			<h3>Significance of St. Behnam in the Indian Orthodox Church:</h3>
-				<p>
-					The Indian Orthodox Church, being part of the Oriental Orthodox communion, honours saints like St. Behnam who are prominent in the Syriac Christian tradition.
-				</p>
-				<p>
-					St. Behnam is venerated as a saint in the Indian Orthodox Church, and his name is associated with several parishes and institutions within 
-					the Church. St. Behanan's Indian Orthodox Church is one such parish that bears his name and seeks to honour his memory and witness to the 
-					faith. The parish community gathers for worship, prayer, and fellowship, following the rich liturgical and spiritual traditions of the 
-					Indian Orthodox Church. St. Behanan's Indian Orthodox Church is a
-				</p>
-				
-				<p>
-					Churches dedicated to St. Behnam (such as St. Behanan's Indian Orthodox Church) continue his legacy of unwavering faith and devotion to Christ.
-				</p>
+		
 	</div>	
 
 	<!-- Main footer to hold other inner divisions -->
