@@ -38,8 +38,6 @@ html,body{
 		max-width: 80%;
 	}
 
-	
-
 	/* For the icons used in home page */
 	img.icon{
 		width: 30%;
@@ -179,8 +177,10 @@ html,body{
 
 	/* Dropdown Styling */
 	.dropdown {
-		float: left;
-		overflow: hidden;
+		/* float: left; */
+		/* overflow: hidden; */
+		position: relative;
+		display: inline-block;
 	  }
 	  
 	.dropdown .dropbtn {
@@ -204,6 +204,7 @@ html,body{
 		position: absolute;
 		/* background-color: #f9f9f9; */
 		min-width: 160px;
+		width: 100%;
 		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 		z-index: 1;
 	}
