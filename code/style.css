@@ -736,8 +736,18 @@ html,body{
 		display: none;
 	} 
 
+	/* Hiding the banner  */
+	a#logo{
+		display: none;
+	}
+
 	/* Hiding the logo in the footer */
 	a#logoFooter{
+		display: none;
+	}
+
+	/* Hiding the church logo from the banner */
+	img.churchLogo{
 		display: none;
 	}
 
@@ -761,7 +771,8 @@ html,body{
         background-color: #AD0000;
         flex-direction: row;
         justify-content: flex-start;
-        align-items: start;
+        align-items: center;
+		padding-right:10px; /* To give a bit of space between the menu and the right edge of the screen */
 	}
 
 	
@@ -771,23 +782,26 @@ html,body{
 	}
 	
 	/* To make the logo a link to the homepage */
-	a#logo{
+	/* a#logo{
 		font-family: 'Poppins','Arial';
 		color: #ffffff;
 		font-size: 1.63em;
 		margin-bottom: auto;
 		background-color: #AD0000;
-	}
+	} */
 
 	#banner {
+		/* display: none; */
+		background: transparent;
 		display: flex;
 		margin:auto;
 		/* height: 50px; */
 		padding-top:0px;
-		justify-content: center;
+		/* justify-content: center; */
 		align-items: center;
 		font-family: 'Poppins','Arial';
 		/* font-size: 250%; */
+		
 	}
 
 	/* Hamburger menu close icon */
@@ -869,7 +883,7 @@ html,body{
 		margin:auto;
 		height: auto;
 		max-width: 1100px;
-		border: 2px solid rgb(0, 0, 0);
+		/* border: 2px solid rgb(0, 0, 0); */
 		padding:5px;
 		padding-top:0px;
 		margin-left: 2px;
@@ -889,6 +903,36 @@ html,body{
 		height: auto;
 		margin: 10px;
 	}
+
+	/* For Normal Images */
+	img{
+		width: 75%;
+		height: auto;
+		border: black 2px solid;
+		/* margin-left: 11%; */
+		object-fit: contain;
+		background-color: rgb(255, 255, 255); /*Just for visual purpose during initial designing*/	
+		border-radius: 10px;
+		border: 2px solid black;
+		/* margin-top: 2%; */
+	}
+
+	/* For the logo icon in the banner */
+	img#logo{
+		width: 30%;
+		background: transparent;
+		/* border-radius: 50%; */
+		/* border: #000000 2px solid; */
+		border: none;
+	}
+
+	/* Styling the logo in banner */
+	img.parishLogo{
+		/* border: none; */
+	}
+	
+
+	
 
 	/* To align the elements in the division (service timing and location) */
 	span.service, span.location{
@@ -1024,24 +1068,9 @@ html,body{
 		color: white;
 		margin-top: 0px;
 		font-weight: normal;	
-	}
+	}	
 
-	
-
-	/* For Normal Images */
-	img{
-		width: 80%;
-		height: auto;
-		border: black 2px solid;
-		margin-left: 11%;
-		object-fit: contain;
-		background-color: rgb(255, 255, 255); /*Just for visual purpose during initial designing*/	
-		border-radius: 10px;
-		border: 2px solid black;
-		margin-top: 2%;
-	}
-
-	.video iframe{
+	/* .video iframe{
 		border: 2px solid black;
 		border-radius: 10px;
 		width:560px; 
@@ -1053,10 +1082,10 @@ html,body{
 		width: 80%;
 		border: 2px solid #525252;
 		border-radius: 30px;
-	}
+	} */
 
 	ul {
-		background-color: #AD0000;
+		/* background-color: #AD0000; */
 		background-color: #940303;
 		
 	}
@@ -1065,7 +1094,7 @@ html,body{
 		display: inline-block;
 		padding-right: 25px;
 		padding-left: 25px;
-		background-color: #AD0000;
+		/* background-color: #AD0000; */
 		background-color: #940303;
 	}
 
@@ -1087,6 +1116,7 @@ html,body{
 		background-color: inherit;
 		color: rgb(255, 255, 255);
 		text-decoration: none;
+		text-align: center;
 	}
 
 	/* Changes the colour of the hamburger menu */
@@ -1119,7 +1149,5 @@ html,body{
 	h2.center{
 		text-align: center;
 	}
-
-	
 	
 }
