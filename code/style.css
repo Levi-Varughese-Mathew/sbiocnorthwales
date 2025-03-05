@@ -765,20 +765,41 @@ html,body{
 	/* Header styling */
 	div.header{
 		display: flex;
-        flex-wrap: nowrap;
-        padding-left: 4px;
-		padding-right: 4px;
         background-color: #AD0000;
         flex-direction: row;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: center;
-		padding-right:10px; /* To give a bit of space between the menu and the right edge of the screen */
+		height: 100px;
+		padding-right: 10px;
 	}
 
-	
+	#banner {
+		background: transparent;
+		display: flex;
+		justify-content: flex-start;
+		/* margin:auto; */
+		padding-top:0px;
+		z-index: 2;
+		/* align-items: center; */
+		/* font-family: 'Poppins','Arial'; */
+	}
+
 	.material-symbols-outlined {
 		background-color: inherit;
 		color: white;
+		font-size: 40px !important;
+	}
+
+	/* For the logo icon in the banner */
+	img#logo{
+		background: transparent;
+		border: none;
+		/* margin-left: 2px; */
+	}
+
+	/* Styling the logo in banner */
+	img.parishLogo{
+		width: 100px;
 	}
 	
 	/* To make the logo a link to the homepage */
@@ -790,19 +811,7 @@ html,body{
 		background-color: #AD0000;
 	} */
 
-	#banner {
-		/* display: none; */
-		background: transparent;
-		display: flex;
-		margin:auto;
-		/* height: 50px; */
-		padding-top:0px;
-		/* justify-content: center; */
-		align-items: center;
-		font-family: 'Poppins','Arial';
-		/* font-size: 250%; */
-		
-	}
+	
 
 	/* Hamburger menu close icon */
 	#btnCloseMenu{
@@ -827,7 +836,7 @@ html,body{
 		margin: 0; */
 
 		border: none;
-		background-color: #E3E8F3;
+		/* background-color: #E3E8F3; */
 		color: #000000;
 		padding: 14px 16px;
 		text-decoration: none;
@@ -917,19 +926,7 @@ html,body{
 		/* margin-top: 2%; */
 	}
 
-	/* For the logo icon in the banner */
-	img#logo{
-		width: 30%;
-		background: transparent;
-		/* border-radius: 50%; */
-		/* border: #000000 2px solid; */
-		border: none;
-	}
-
-	/* Styling the logo in banner */
-	img.parishLogo{
-		/* border: none; */
-	}
+	
 	
 
 	
@@ -981,7 +978,7 @@ html,body{
 	
 	/* Style navigation menu links */
 	.topnav a.links {
-		background-color: #E3E8F3;
+		/* background-color: #E3E8F3; */
 		color: #000000;
 		padding: 14px 16px;
 		text-decoration: none;
