@@ -45,7 +45,6 @@ html,body{
 	#banner img#logo{
 		width: 15%;
 		background: transparent;
-		
 	}
 
 	/* To float items to the right */
@@ -56,10 +55,10 @@ html,body{
 	}
 
 	.float-center{
-		border-radius: 15px;
+		border-radius: 10px;
 		display: flex;
 		margin: auto;
-		max-width: 80%;
+		max-width: 90%;
 	}
 
 	/* For the icons used in home page */
@@ -97,17 +96,12 @@ html,body{
         align-items: center;
 	}
 
-	/* img.info{
-		width: 40%;
-		height: auto;
-		margin: auto;
-		margin-top: 2%;
-		margin-left: 30%;
-	} */
-
 	/* Hover effect for images */
 	.enlarge:hover{
-		transform:scale(1.1);
+		transform: translateY(-5px); /* Lift on Hover */
+  		box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2); /* Stronger Shadow on Hover */
+		transition: transform 0.3s ease, box-shadow 0.3s ease; 
+		/* transform:scale(1.1); */
 	}
 
 	/* div.video{
@@ -132,6 +126,62 @@ html,body{
 		border-radius: 10px;
 		border: 2px solid black;
 		z-index: 4;
+	}
+
+	/* Division which hold the office bearers */
+	div.officeBearers{
+		background-color: inherit;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		align-items: center;
+		margin-bottom: 50px;
+		
+	}
+
+	/* Styling the user info card */
+	div.person-info{
+		
+		background-color: #d4c48f;
+		padding: 20px;
+		border-radius: 10px;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		/* justify-content: space-evenly; */
+		align-items: center;
+		min-width: 250px;
+		margin: 10px;
+
+		box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15); /* Subtle Shadow for 3D Effect */
+  		transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth Transition for Hover Effect */
+	}
+
+	.person-info p{
+		background-color: inherit;
+		/* color: white; */
+		font-size: 18px;
+		background-color: transparent;
+		margin: 0;
+	}
+
+	/* Name of the person in the card */
+	.person-info-name{
+		font-size: 22px !important;
+		font-weight: bold;
+	}
+
+	/* Styling the image inside the user info card */
+	.person-info img{	
+		object-fit: contain;
+		height: auto;
+		margin-bottom: 10px;
+		border-radius: 10px;
+	}
+
+	.person-info:hover{
+		transform: translateY(-5px); /* Lift on Hover */
+  		box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2); /* Stronger Shadow on Hover */
 	}
 
 	/* .video iframe{
@@ -262,7 +312,8 @@ html,body{
 		box-sizing: border-box;
 		/* background-color: #AD0000; */
 		background-color: #940303;
-		margin-bottom: -1px;		
+		margin-bottom: -1px;	
+		width: 100%;	
 	}
 
 	div.subFooter {
@@ -971,6 +1022,57 @@ html,body{
 		z-index: 4;
 	}
 
+
+	/* Division which hold the office bearers */
+	div.officeBearers{
+		background-color: inherit;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		align-items: center;
+		margin-bottom: 50px;
+		
+	}
+
+	/* Styling the user info card */
+	div.person-info{
+		
+		background-color: #d4c48f;
+		padding: 20px;
+		border-radius: 10px;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		/* justify-content: space-evenly; */
+		align-items: center;
+		min-width: 250px;
+		margin: 10px;
+
+		box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15); /* Subtle Shadow for 3D Effect */
+  		transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth Transition for Hover Effect */
+	}
+
+	.person-info p{
+		background-color: inherit;
+		/* color: white; */
+		font-size: 18px;
+		background-color: transparent;
+		margin: 0;
+	}
+
+	/* Name of the person in the card */
+	.person-info-name{
+		font-size: 22px !important;
+		font-weight: bold;
+	}
+
+	/* Styling the image inside the user info card */
+	.person-info img{	
+		object-fit: contain;
+		height: auto;
+		margin-bottom: 10px;
+		border-radius: 10px;
+	}
 
 	/* Style the navigation menu */
 	.topnav {
