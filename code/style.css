@@ -141,7 +141,6 @@ html,body{
 
 	/* Styling the user info card */
 	div.person-info{
-		
 		background-color: #d4c48f;
 		padding: 20px;
 		border-radius: 10px;
@@ -152,7 +151,7 @@ html,body{
 		align-items: center;
 		min-width: 250px;
 		margin: 10px;
-
+		/* Imported code */
 		box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15); /* Subtle Shadow for 3D Effect */
   		transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth Transition for Hover Effect */
 	}
@@ -375,11 +374,14 @@ html,body{
 
 	div.row img{
 		width: 80%;
+		border-radius: 10px;
 	}
 
 	div.column{
 		display: flex;
 		justify-content: center;
+		flex-direction: column;
+		align-items: center;
 	}
 
 	/* Styling the paragraph in the modal container. Caption */
@@ -541,10 +543,15 @@ html,body{
 	  
 	  img.hover-shadow {
 		transition: 0.3s;
+		
 	  }
 	  
 	  .hover-shadow:hover {
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		transform: translateY(-5px); /* Lift on Hover */
+  		box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2); /* Stronger Shadow on Hover */
+		/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+		box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15); /* Subtle Shadow for 3D Effect */
+  		transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth Transition for Hover Effect */
 	  }
 
 	/* End of lightbox css */
