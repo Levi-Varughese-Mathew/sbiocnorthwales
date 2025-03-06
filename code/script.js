@@ -54,6 +54,38 @@ function menuFunction() {
     }    
   }
 
+// Function to display the hamburger menu when icon is clicked and to close it when clicked outside the menu or on the close icon
+function showDropdown(dropDownId) {
+  // Test message to check if the function is called
+  console.log("showDropdown function called");
+
+  // Get the dropdown element
+  var dropDown = document.getElementById(dropDownId);
+
+  // If the dropdown is open, close it. If it is closed, open it
+  // Show is a class that is used to show the dropdown (in css)
+  // If the dropdown has the class show, remove it. If it doesn't have the class show, add it
+  if (dropDown.classList.contains("show")) {
+    dropDown.classList.remove("show");
+  } else {
+    dropDown.classList.add("show");
+  }
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropDowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i=0; i < dropDowns.length; i++){
+      var openDropDown = dropDowns[i];
+      if (openDropDown.classList.contains('show')) {
+        openDropDown.classList.remove('show');
+      }
+    } 
+  }
+}
+
 //JS used for lightbox
 // Open the Modal
 function openModal() {
