@@ -9,6 +9,10 @@
 html,body{
 	margin: 0px;
 	/* padding:5px; */
+	/* To take the entire height */
+	height: 100%;
+	display: flex;
+	flex-direction: column;
 }
 
 /* Bigger Display */
@@ -237,6 +241,7 @@ html,body{
 		/* border: 2px solid rgb(0, 0, 0); */
 		padding: 18px;
 		padding-bottom: 0%;		
+		flex: 1;
 	}
 
 	div.navBar{
@@ -1269,5 +1274,103 @@ html,body{
 	h2.center{
 		text-align: center;
 	}
+
+	/* CSS for the contact form template */
+	/* https://web3forms.com/templates/basic-html-contact-form */
+
+	.contact-section {
+		width: 100%;
+		max-width: 50rem;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 2rem;
+	  }
+	  
+	  .contact-intro > * + * {
+		margin-top: 1rem;
+	  }
+	  
+	  .contact-title {
+		font-size: 1.875rem;
+		line-height: 2.25rem;
+		font-weight: 700;
+		text-align: center;
+	  }
+	  
+	  .contact-description {
+		color: rgb(107 114 128);
+		text-align: center;
+	  }
+	  
+	  .form-group-container {
+		display: grid;
+		gap: 1rem;
+		margin-top: 2rem;
+	  }
+	  
+	  .form-group {
+		display: flex;
+		flex-direction: column;
+	  }
+	  
+	  .form-label {
+		margin-bottom: 0.5rem;
+	  }
+	  
+	  .form-input,
+	  .form-textarea {
+		padding: 0.5rem;
+		/* border: 1px solid #e5e7eb; */
+		border: 1px solid #000000;
+		
+		display: flex;
+		height: 2.5rem;
+		width: 100%;
+		border-radius: 0.375rem;
+		font-size: 0.875rem;
+		line-height: 1.25rem;
+	  }
+
+	  .form-textarea-request-prayer {
+		min-height: 60px;
+	  }
+	  .form-textarea-request-prayer {
+		padding: 0.5rem;
+		/* border: 1px solid #e5e7eb; */
+		border: 1px solid #000000;
+		display: flex;
+		height: 2.5rem;
+		width: 100%;
+		border-radius: 0.375rem;
+		font-size: 0.875rem;
+		line-height: 1.25rem;
+		margin-bottom: 0.5rem;
+	  }
+	  
+	  .form-input::placeholder,
+	  .form-textarea:focus-visible {
+		color: #6b7280;
+	  }
+	  
+	  .form-input:focus-visible,
+	  .form-textarea:focus-visible {
+		outline: 2px solid #AD0000;
+		
+		outline-offset: 2px;
+	  }
+	  
+	  .form-textarea {
+		min-height: 120px;
+	  }
+	  
+	  .form-submit {
+		width: 100%;
+		margin-top: 1.2rem;
+		/* background-color: #AD0000; */
+		background-color: #940303;
+		color: #fff;
+		padding: 13px 5px;
+		border-radius: 0.375rem;
+	  }
 	
 }
