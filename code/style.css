@@ -152,7 +152,8 @@ html,body{
 		width: 250px;
 		min-height: 337px;
 		margin: 10px;
-		/* Imported code */
+		/* Imported code */ 
+		
 		box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15); /* Subtle Shadow for 3D Effect */
   		transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth Transition for Hover Effect */
 	}
