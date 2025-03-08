@@ -339,7 +339,7 @@ html,body{
 		display: flex;
 		/* height: 120px; */
 		padding:5px;
-		padding-top:50px;
+		/* padding-top:50px; */
 		justify-content: center;
 		align-items: center;
 		float: left;
@@ -356,6 +356,11 @@ html,body{
 		font-size: 200%;
 	}
 
+	#bannerFooter img#logo{
+		width: 100%;
+		max-width: 220px;
+		background: transparent;
+	}
 
 	/* Style all font awesome icons */
 	.footer .fa {
