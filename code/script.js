@@ -88,69 +88,115 @@ window.onclick = function(event) {
 
 //JS used for lightbox
 // Open the Modal
-function openModal() {
-  console.log("openModal function called");
+var currentEvent = "";
+// Used to have a reference for the slide number (slide 1 initially)
+var slideIndex = 1;
+var slideLength = 0;
+
+function openModal(eventClass) {
+  // console.log("openModal function called");
   document.getElementById("myModal").style.display = "block";
+
+  // Assigning a global variable to the current event
+  currentEvent = eventClass;
+
+  // Hiding all dots (row images) initially
+  var dots = document.getElementsByClassName("demo");
+  // console.log("Hiding all dots initially");
+  for (i = 0; i < dots.length; i++) {
+    dots[i].style.display = "none";
+  }
+  //Showing the dots (row images) for the current event
+  var eventDots = document.getElementsByClassName("demo "+eventClass);
+  // console.log("Showing the dots for the current event");
+  for (i = 0; i < eventDots.length; i++) {
+    eventDots[i].style.display = "block";
+  }
+
+  // Hiding all slides initially
+  var slides = document.getElementsByClassName("mySlides");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
   showSlides(slideIndex,eventClass);
 }
 
 // Close the Modal
 function closeModal() {
   document.getElementById("myModal").style.display = "none";
+  //Clearing the slide index and variables
+  // slideIndex = 1;
+  // eventClass = "";
+  // console.log("Close modal function called");
 }
 
-var slideIndex = 1;
-
-// showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n, eventClass) {
-  showSlides(slideIndex += n,eventClass);
+function plusSlides(n) {
+  // If prev, decrement the slide number. If next, increment the slide number
+  // Value checking is done in showSlides function (limit testing)
+  if (n == -1) {
+    slideIndex = slideIndex - 1;
+    showSlides(slideIndex,currentEvent);
+  } else {
+    slideIndex = slideIndex + 1; 
+    showSlides(slideIndex,currentEvent)
+  } 
 }
 
 // Thumbnail image controls
-function currentSlide(n,eventClass) {
-  showSlides(slideIndex = n,eventClass);
+function currentSlide(slideIndex,eventClass) {
+  showSlides(slideIndex,eventClass);
 }
 
+// Function to show the slides (based on slide number and event class)
 function showSlides(n, eventClass) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
+  console.log("showSlides function called");
+  // Assigning a global variable to the current event
+  currentEvent = eventClass;
 
-  // Hide all slides
+  var i; // Loop variable
+  var slides = document.getElementsByClassName("myModal "+eventClass); // All the slides with the specified class name, variable is a collection of all the slides
+  var dots = document.getElementsByClassName("demo "+eventClass); // All the dots (row images) collection. Corresponding to the slides (event)
+  
+  var captionText = document.getElementById("caption"); // The caption text
+
+  // If the slide number is greater than the total number of slides, set the slide number to 1
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
- 
-  // Removing active class from all dots (row images)
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+    // slides[i].style.display = "none";
+    slides[i].style.display = "flex";
   }
 
   // Showing slides for current event
-  var eventSlides = document.getElementsByClassName(eventClass);
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+  // eventSlides is a collection of all the slides for the current event
+  var eventSlides = document.getElementsByClassName("mySlides "+eventClass);
 
-  // Displaying the slides for the current event
-  eventSlides[slideIndex-1].style.display = "flex";
+  //Assinging the global variable to the slide length (used for next and prev buttons)
+  slideLength = eventSlides.length;
   
-  // for (i = 0; i < slides.length; i++) {
-  //   slides[i].style.display = "none";
-  // }
-  // for (i = 0; i < dots.length; i++) {
-  //   dots[i].className = dots[i].className.replace(" active", "");
-  // }
-  // slides[slideIndex-1].style.display = "flex";
-  // slides[slideIndex-1].style.display = "block";
+  // Set the slide number to the current slide number (based on parameter)
+  slideIndex = n;
 
-  // Adding active class to the current slide
-  var eventDots = document.querySelectorAll(".demo"+eventClass);
-  eventDots[slideIndex-1].className += " active";
+  // If the slide number is greater than the total number of slides, set the slide number to 1
+  if (n > eventSlides.length) {slideIndex = 1}
+  // If the slide number is less than 1, set the slide number to the total number of slides
+  if (n < 1) {slideIndex = eventSlides.length}
 
 
+  // Hiding all slides initially (so that only the current slide is displayed when row image is clicked)
+  for (i = 0; i < eventSlides.length; i++) {
+    eventSlides[i].style.display = "none";
+  }
+  // Displaying the current slide (based on event)
+  eventSlides[slideIndex-1].style.display = "block";
+
+  // Removing active class from all dots (row images)
+  for (i = 0; i < dots.length; i++) {
+    // console.log("Removing active class from all dots");
+    dots[i].className = dots[i].className.replace(" active", "");
+  }  
+  // Adding active class to the current row image
+  // var eventDots = document.querySelectorAll(".demo"+eventClass);
+  // eventDots[slideIndex-1].className += " active";
   // dots[slideIndex-1].className += " active";
 
   // Update the caption text

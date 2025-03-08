@@ -467,6 +467,9 @@ html,body{
 		padding: 0;
 		width: 90%;
 		max-width: 1200px;
+
+		/* Extra code */
+		display: block;
 	  }
 	  
 	  /* The Close Button */
@@ -490,7 +493,7 @@ html,body{
 	  /* Hide the slides by default */
 	  .mySlides {
 		display: none;
-		flex-direction: column-reverse;
+		/* flex-direction: column-reverse; */
 		align-items: center;
 		
 	  }
@@ -547,6 +550,11 @@ html,body{
 	  img.demo {
 		opacity: 0.6;
 		/* width: 20%; */
+		/* display: none; */
+	  }
+
+	  img.active {
+		display: block;
 	  }
 	  
 	  .active,
