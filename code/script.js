@@ -89,7 +89,9 @@ window.onclick = function(event) {
 //JS used for lightbox
 // Open the Modal
 function openModal() {
+  console.log("openModal function called");
   document.getElementById("myModal").style.display = "block";
+  showSlides(slideIndex,eventClass);
 }
 
 // Close the Modal
@@ -98,34 +100,60 @@ function closeModal() {
 }
 
 var slideIndex = 1;
-showSlides(slideIndex);
+
+// showSlides(slideIndex);
 
 // Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
+function plusSlides(n, eventClass) {
+  showSlides(slideIndex += n,eventClass);
 }
 
 // Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
+function currentSlide(n,eventClass) {
+  showSlides(slideIndex = n,eventClass);
 }
 
-function showSlides(n) {
+function showSlides(n, eventClass) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("demo");
   var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+
+  // Hide all slides
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
+ 
+  // Removing active class from all dots (row images)
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "flex";
+
+  // Showing slides for current event
+  var eventSlides = document.getElementsByClassName(eventClass);
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+
+  // Displaying the slides for the current event
+  eventSlides[slideIndex-1].style.display = "flex";
+  
+  // for (i = 0; i < slides.length; i++) {
+  //   slides[i].style.display = "none";
+  // }
+  // for (i = 0; i < dots.length; i++) {
+  //   dots[i].className = dots[i].className.replace(" active", "");
+  // }
+  // slides[slideIndex-1].style.display = "flex";
   // slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
+
+  // Adding active class to the current slide
+  var eventDots = document.querySelectorAll(".demo"+eventClass);
+  eventDots[slideIndex-1].className += " active";
+
+
+  // dots[slideIndex-1].className += " active";
+
+  // Update the caption text
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 
