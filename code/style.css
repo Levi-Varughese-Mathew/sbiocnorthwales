@@ -3,7 +3,7 @@
 	/* background-color: #f0f0f0; */
 	background-color: #f1e4bb;
 	font-family: 'Poppins',"Arial","Sans-serif";
-	/* font-weight: bold; */
+	
 }
 
 html,body{
@@ -48,6 +48,7 @@ html,body{
 
 	#banner img#logo{
 		width: 15%;
+		max-width: 220px;
 		background: transparent;
 	}
 
@@ -157,7 +158,6 @@ html,body{
 		min-height: 337px;
 		margin: 10px;
 		/* Imported code */ 
-		
 		box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15); /* Subtle Shadow for 3D Effect */
   		transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth Transition for Hover Effect */
 	}
@@ -214,7 +214,7 @@ html,body{
 		align-items: center;
 		margin:auto;
 		margin-bottom: 10px;
-		height: 350px;
+		height: 300px;
 		padding:5px;
 		padding-top:0px;		
 		background-color: transparent;
@@ -224,7 +224,9 @@ html,body{
 		font-family: 'Poppins','Arial';
 		color: #ffffff;
 		/* background-color: #ffffff;  */
-		font-size: 300%;
+		/* font-size: 5vw; */
+		font-size: clamp(1.5rem, 5vw, 48px);
+		/* max-font-size: 48px; */
 		text-align: center;
 		word-wrap: break-word;
 		font-weight: bold;
@@ -1136,7 +1138,9 @@ html,body{
 	} */
 
 	div.footer {
-		display: inline-flex;
+		/* display: inline-flex; */
+		display: flex;
+		flex-direction: column;
 		height: fit-content;
 		width:100%;
 		background-color: #AD0000;
@@ -1173,27 +1177,27 @@ html,body{
 	.footer .socialMediaIcons {
 		overflow: hidden;
 		display: flex;
-		float: right;
+		/* float: right; */
 		height: auto;
-		background-color: #AD0000;
-		width: 50%;
+		background-color: inherit;
+		width: 80%;
 		font-size: 15px;
 		flex-wrap: wrap;
 		justify-content: space-evenly;
-		align-content: center;
+		/* align-content: center; */
 	}
 
 	.footer .otherLinks{
 		overflow: hidden;
-		background-color: #AD0000;
-		float:left;
+		background-color: inherit;
+		/* float:left; */
 		height: auto;
-		width: 50%;
+		/* width: 50%; */
 		padding: 7px;
 	}
 	
 	.footer p#otherLinks{
-		background-color: #AD0000;
+		background-color: inherit;
 		color: white;
 		margin-top: 0px;
 		font-weight: normal;	
@@ -1256,11 +1260,16 @@ html,body{
 	.footer a:link {
 		color: rgb(255, 255, 255);
 		font-weight: normal;
+		/* padding: 2px; */
+		/* padding-bottom: 10px; */
 	}
 
 	/* Made the links underlines to show them as links */
 	.footer .otherLinks a{
+		display: block;
 		text-decoration: underline;
+		margin-bottom: -20px;
+		text-align: left;
 	}
 
 	p#subhead {
