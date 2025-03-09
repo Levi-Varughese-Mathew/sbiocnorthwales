@@ -95,7 +95,7 @@ var slideLength = 0;
 
 function openModal(eventClass) {
   // console.log("openModal function called");
-  document.getElementById("myModal").style.display = "block";
+  document.getElementById("myModal").style.display = "flex";
 
   // Assigning a global variable to the current event
   currentEvent = eventClass;
@@ -187,14 +187,15 @@ function showSlides(n, eventClass) {
     eventSlides[i].style.display = "none";
   }
   // Displaying the current slide (based on event)
-  eventSlides[slideIndex-1].style.display = "block";
+  eventSlides[slideIndex-1].style.display = "flex"; 
 
   // Removing active class from all dots (row images)
   for (i = 0; i < dots.length; i++) {
     // console.log("Removing active class from all dots");
     dots[i].className = dots[i].className.replace(" active", "");
   }  
-  // Adding active class to the current row image
+  // Adding active class to the current row image (dot)
+  dots[slideIndex-1].className += " active";
   // var eventDots = document.querySelectorAll(".demo"+eventClass);
   // eventDots[slideIndex-1].className += " active";
   // dots[slideIndex-1].className += " active";

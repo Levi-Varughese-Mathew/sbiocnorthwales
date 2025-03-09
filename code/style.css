@@ -396,6 +396,7 @@ html,body{
 		justify-content: center;
 		flex-direction: column;
 		align-items: center;
+		max-width: 500px;
 	}
 
 	/* Styling the paragraph in the modal container. Caption */
@@ -412,19 +413,22 @@ html,body{
 		display: flex;
 		/* justify-content: center; */
 		width:25%;
+		background-color: black;
 	}
 
 	/* Styling the row which contains other images when the modal container is opened */
 	.modal div.row{
 		display: flex;
-		flex-wrap: nowrap;
+		/* flex-wrap: nowrap; */
 		justify-content: center;
+		background-color: black;
 	}
 
 	/* Changing the padding of the image */
 	/* Imported code is commented out (line 239) */
 	.row > .column {
 		padding: 8px;
+		width: auto;
 	  }
 
 	/* Start of lightbox css */
@@ -493,9 +497,18 @@ html,body{
 	  /* Hide the slides by default */
 	  .mySlides {
 		display: none;
-		/* flex-direction: column-reverse; */
+		background-color: black;
+		/* Code to be used when display changed to flex using js */
+		flex-direction: column-reverse;
 		align-items: center;
-		
+		position: relative;
+	  }
+
+	  /* Stlying the slide image */
+	  .mySlides img{
+		width: 100%;
+		height: auto;
+		margin: auto;
 	  }
 	  
 	  /* Next & previous buttons */
@@ -507,7 +520,7 @@ html,body{
 		top: 50%;
 		width: auto;
 		padding: 16px;
-		margin-top: -50px;
+		margin-top: -22px;
 		color: rgb(0, 0, 0);
 		font-weight: bold;
 		font-size: 20px;
@@ -531,11 +544,12 @@ html,body{
 	  
 	  /* Number text (1/3 etc) */
 	  .numbertext {
-		color: #000000;
+		color: #ffffff;
 		font-size: 12px;
 		padding: 8px 12px;
 		position:relative;
 		top: 0;
+		background-color: black;
 	  }
 	  
 	  /* Caption text */
@@ -547,15 +561,15 @@ html,body{
 		color: white;
 	  }
 	  
-	  img.demo {
-		opacity: 0.6;
+	  .demo {
+		opacity: 0.4;
 		/* width: 20%; */
 		/* display: none; */
 	  }
 
-	  img.active {
+	  /* img.active {
 		display: block;
-	  }
+	  } */
 	  
 	  .active,
 	  .demo:hover {
@@ -1145,6 +1159,221 @@ html,body{
 		top: 15px;
 	}
 	
+
+	/* Personal css for the lightbox */
+	/* Changing the size of the image */
+	div.row{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	div.row img{
+		width: 80%;
+		border-radius: 10px;
+	}
+
+	div.column{
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		max-width: 500px;
+	}
+
+	/* Styling the paragraph in the modal container. Caption */
+	.modal p{
+		background-color: #000000;
+		color: white;
+		text-align: center;
+		padding: 8px;
+		margin-top: 0;
+	}
+
+	/* Styling the modal container */
+	.modal div.column{
+		display: flex;
+		/* justify-content: center; */
+		width:25%;
+		background-color: black;
+	}
+
+	/* Styling the row which contains other images when the modal container is opened */
+	.modal div.row{
+		display: flex;
+		/* flex-wrap: nowrap; */
+		justify-content: center;
+		background-color: black;
+	}
+
+	/* Changing the padding of the image */
+	/* Imported code is commented out (line 239) */
+	.row > .column {
+		padding: 8px;
+		width: auto;
+	  }
+
+	/* Start of lightbox css */
+	/* .row > .column { */
+		/* padding: 0 8px; */
+	  /* } */
+	  
+	.row:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	  
+	  /* Create four equal columns that floats next to eachother */
+	/* .column { */
+		/* float: right; */
+		/* width: 25%; */
+	  /* } */
+	  
+	/* The Modal (background) */
+	.modal {
+		display: none;
+		position: fixed;
+		z-index: 1;
+		padding-top: 100px;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
+		background-color: black;
+		
+	  }
+	  
+	  /* Modal Content */
+	  .modal-content {
+		position: relative;
+		background-color: #fefefe;
+		margin: auto;
+		padding: 0;
+		width: 90%;
+		max-width: 1200px;
+
+		/* Extra code */
+		display: block;
+	  }
+	  
+	  /* The Close Button */
+	  .close {
+		background-color: #000000;
+		color: rgb(255, 255, 255);
+		position: absolute;
+		top: 10px;
+		right: 25px;
+		font-size: 35px;
+		font-weight: bold;
+	  }
+	  
+	  .close:hover,
+	  .close:focus {
+		color: #999;
+		text-decoration: none;
+		cursor: pointer;
+	  }
+	  
+	  /* Hide the slides by default */
+	  .mySlides {
+		display: none;
+		background-color: black;
+		/* Code to be used when display changed to flex using js */
+		flex-direction: column-reverse;
+		align-items: center;
+		position: relative;
+	  }
+
+	  /* Stlying the slide image */
+	  .mySlides img{
+		width: 100%;
+		height: auto;
+		margin: auto;
+	  }
+	  
+	  /* Next & previous buttons */
+	  .prev,
+	  .next {
+		background-color: #f0f0f0;
+		cursor: pointer;
+		position: absolute;
+		top: 50%;
+		width: auto;
+		padding: 16px;
+		margin-top: -22px;
+		color: rgb(0, 0, 0);
+		font-weight: bold;
+		font-size: 20px;
+		transition: 0.6s ease;
+		border-radius: 0 3px 3px 0;
+		user-select: none;
+		-webkit-user-select: none;
+	  }
+	  
+	  /* Position the "next button" to the right */
+	  .next {
+		right: 0;
+		border-radius: 3px 0 0 3px;
+	  }
+	  
+	  /* On hover, add a black background color with a little bit see-through */
+	  .prev:hover,
+	  .next:hover {
+		background-color: rgba(0, 0, 0, 0.8);
+	  }
+	  
+	  /* Number text (1/3 etc) */
+	  .numbertext {
+		color: #ffffff;
+		font-size: 12px;
+		padding: 8px 12px;
+		position:relative;
+		top: 0;
+		background-color: black;
+	  }
+	  
+	  /* Caption text */
+	  .caption-container {
+		text-align: center;
+		background-color: black;
+		padding: 16px;
+		margin: 0px;
+		color: white;
+	  }
+	  
+	  .demo {
+		opacity: 0.4;
+		/* width: 20%; */
+		/* display: none; */
+	  }
+
+	  /* img.active {
+		display: block;
+	  } */
+	  
+	  .active,
+	  .demo:hover {
+		opacity: 1;
+	  }
+	  
+	  
+	  img.hover-shadow {
+		transition: 0.3s;
+		
+	  }
+	  
+	  .hover-shadow:hover {
+		transform: translateY(-5px); /* Lift on Hover */
+  		box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2); /* Stronger Shadow on Hover */
+		/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+		box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15); /* Subtle Shadow for 3D Effect */
+  		transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth Transition for Hover Effect */
+	  }
+
+	/* End of lightbox css */
+
 	/* Hamburger menu */
 	/* Add a grey background color on mouse-over */
 	/* .topnav a:hover {
