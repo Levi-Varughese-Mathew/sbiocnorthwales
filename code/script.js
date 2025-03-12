@@ -86,6 +86,14 @@ window.onclick = function(event) {
   }
 }
 
+// Function to change contact forms
+function changeForm(openForm,closeForm){
+  document.getElementById(openForm).style.display = "flex";
+  document.getElementById(closeForm).style.display = "none";
+
+}
+
+
 //JS used for lightbox
 // Open the Modal
 var currentEvent = "";

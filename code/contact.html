@@ -126,14 +126,21 @@
 		</div>		
 	</div>
 
-	
+	<div class="form-button-holder">
+		<!-- Buttons used to change forms -->
+		<button class="form-button" onclick="changeForm('contact-form','prayer-request-form')">Contact Us</button>
+		<button class="form-button" onclick="changeForm('prayer-request-form','contact-form')">Request Prayer</button>
+	</div>
+
 	<!--Container where all the information for the pages will go  -->
 	<div id="container">
 		
 		<!-- <h1>CONTACT US</h1> -->
 
-		<!-- Form for contacting -->
-		<section class="contact-section">
+		
+
+		<!-- Contact form -->
+		<section class="contact-section" id="contact-form">
 			<div class="contact-intro">
 			  <h2 class="contact-title">Get in Touch</h2>
 			  <p class="contact-description">
@@ -171,17 +178,18 @@
 				</div>
 			  </div>
 			  <button class="form-submit" type="submit">Send Message</button>
+			  <button class="form-submit" type="reset">Reset</button>
 			</form>
 		  
 		</section>
 			
 
 		<!--Prayer request form (template used) -->
-		<section class="contact-section">
+		<section class="contact-section" id="prayer-request-form">
 			<div class="contact-intro">
 			<h2 class="contact-title">Request Prayer</h2>
 			<p class="contact-description">
-				Fill out the form below to request prayer.
+				Fill out the form below and we'll include you in the prayers.
 			</p>
 			</div>
 		
@@ -215,6 +223,7 @@
 				</div>
 			</div>
 			<button class="form-submit" type="submit">Send Message</button>
+			<button class="form-submit" type="reset">Reset</button>
 			</form>
 		
 		</section>
