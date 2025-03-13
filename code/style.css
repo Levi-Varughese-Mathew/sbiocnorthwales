@@ -133,6 +133,29 @@ html,body{
 		z-index: 4;
 	}
 
+	/* Year section holder */
+	div.year-section{
+		border-left: 5px solid #AD0000; /* Highlighted year indicator */
+		padding: 15px;
+		margin-bottom: 20px;
+		background-color:rgb(184, 170, 170); /* Light gray background */
+		background-color: #f3e2c7;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		padding: 20px;
+		border-radius: 10px;
+		margin-bottom: 20px;
+	}
+
+	/* Title holder */
+	.year-title {
+		font-size: 1.5rem;
+		font-weight: bold;
+		color: #333;
+		margin-bottom: 10px;
+		background-color: inherit;
+	}
+
+	
 	/* Division which hold the office bearers */
 	div.officeBearers{
 		background-color: inherit;
@@ -141,7 +164,16 @@ html,body{
 		justify-content: space-evenly;
 		align-items: center;
 		margin-bottom: 50px;
-		
+	}
+
+	/* Division to hold committee members */
+	div.committeeMembers{
+		background-color: inherit;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		align-items: center;
+		margin-bottom: 50px;
 	}
 
 	/* Styling the user info card */
@@ -160,6 +192,11 @@ html,body{
 		/* Imported code */ 
 		box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.15); /* Subtle Shadow for 3D Effect */
   		transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth Transition for Hover Effect */
+	}
+
+	.committeeMembers div.person-info{
+		width: 200px;
+		min-height: 270px;
 	}
 
 	.person-info p{
@@ -182,6 +219,14 @@ html,body{
 		margin-bottom: 10px;
 		border-radius: 10px;
 		max-width: 200px;
+	}
+
+	.committeeMembers .person-info img{	
+		object-fit: contain;
+		height: auto;
+		margin-bottom: 10px;
+		border-radius: 10px;
+		max-width: 150px;
 	}
 
 	.person-info:hover{
@@ -1149,7 +1194,7 @@ html,body{
 	}
 
 
-	/* Division which hold the office bearers */
+	/* Division which hold the main office bearers */
 	div.officeBearers{
 		background-color: inherit;
 		display: flex;
@@ -1157,12 +1202,12 @@ html,body{
 		justify-content: space-evenly;
 		align-items: center;
 		margin-bottom: 50px;
-		
 	}
+
+	
 
 	/* Styling the user info card */
 	div.person-info{
-		
 		background-color: #d4c48f;
 		padding: 20px;
 		border-radius: 10px;
