@@ -1006,9 +1006,9 @@ html,body{
 }
 
 @media only screen and (max-width:680px) {
-	div.navBar {
-	  /* font-size: 112.5%; */
-	}
+	/* div.navBar {
+	  font-size: 112.5%;
+	} */
 
 	.dropdown .dropbtn  {
 		font-size: 18px;
