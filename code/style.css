@@ -397,16 +397,12 @@ html,body{
 		position: relative;
 		box-sizing: border-box;
 		display: flex;
-		/* height: 120px; */
 		padding:5px;
-		/* padding-top:50px; */
 		justify-content: center;
 		align-items: center;
 		float: left;
-		/* background-color: #AD0000; */
-		/* background-color: #940303; */
 		background-color: inherit;
-		width: 50%;
+		width: 30%;
 		z-index: 0;
 	}
 
@@ -708,8 +704,7 @@ html,body{
 	p {
 		color: rgb(0, 0, 0);
 		/* text-align:left; */
-		text-align: center;
-
+		/* text-align: center; */
 		margin-bottom: 0px;
 	}
 
@@ -727,7 +722,7 @@ html,body{
 
 	.otherLinks a{
 		display: block;
-		margin-bottom: 5px;
+		/* margin-bottom: 5px; */
 		width: 100%;
 	}
 
@@ -761,9 +756,10 @@ html,body{
 		background-color: inherit;
 		float:left;
 		height: 100%;
-		width: 25%;
+		width: 35%;
 		padding:7px;
 		padding-left: 18px;
+		/* overflow:scroll */
 	}
 	
 	p#otherLinks{
@@ -1788,7 +1784,7 @@ html,body{
 	.footer .otherLinks a{
 		display: block;
 		text-decoration: underline;
-		margin-bottom: 10px;
+		/* margin-bottom: 10px; */
 		text-align: left;
 	}
 
