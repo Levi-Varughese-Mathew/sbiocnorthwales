@@ -25,6 +25,7 @@ function menuFunction() {
       menu.style.height = "70vh";
       // menu.style.marginleft = "-10pmenu"
     }
+
   }
 
 // To show the container and hide the hamburger navigation menu when the window is resized
