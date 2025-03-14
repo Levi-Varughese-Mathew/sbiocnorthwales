@@ -725,6 +725,12 @@ html,body{
 		font-weight: normal;
 	}
 
+	.otherLinks a{
+		display: block;
+		margin-bottom: 5px;
+		width: 100%;
+	}
+
 
 	/* Changing the decoration of the links in other links to be underlined always which represents a link */
 	/* .otherLinks a{
@@ -1782,7 +1788,7 @@ html,body{
 	.footer .otherLinks a{
 		display: block;
 		text-decoration: underline;
-		margin-bottom: -20px;
+		margin-bottom: 10px;
 		text-align: left;
 	}
 
