@@ -213,4 +213,15 @@ function showSlides(n, eventClass) {
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 
+// Function to change images in the horizontal row
+let currentIndex = 0;
+const slides = document.querySelectorAll(".slide");
 
+function changeSlide() {
+  slides[currentIndex].classList.remove("active"); // Hide current image
+  currentIndex = (currentIndex + 1) % slides.length; // Move to next image
+  slides[currentIndex].classList.add("active"); // Show next image
+}
+
+setInterval(changeSlide, 1000); // Change image every 3 seconds
+        
