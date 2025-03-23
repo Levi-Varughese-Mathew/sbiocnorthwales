@@ -253,7 +253,7 @@ document.addEventListener("DOMContentLoaded", function () {
     verseSlides[verseSlideIndex-1].style.display = "block";
     dots[verseSlideIndex-1].className += " active";
     
-    setTimeout(showSlidesVerse, 5000); // Change image every 2 seconds
+    setTimeout(showSlidesVerse, 8000); // Change image every 2 seconds
   }
 
 });
