@@ -11,7 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 
 	<!-- Linking JS -->
-	<script src="../script.js"></script>
+	<script src="script.js"></script>
 
 	 <!-- Hamburger Menu and social media icons -->
 	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
@@ -148,14 +148,41 @@
 				Chester and Wrexham.
 			</p> <br>
 
-			
+	</div>
 
-		<!-- Div holding the horizontal scrolling image -->
-		<div class="slideshow-container">
-			<img src="media/bannerImage.jpeg" class="slide active" alt="Image 1">
-			<img src="media/churchLogo.png" class="slide" alt="Image 2">
-			<img src="media/parishLogo.png" class="slide" alt="Image 3">
+	<!-- W3Schools -->
+	<!-- Div for holding the slides (bible verse) -->
+	<div class="slideshow-container">
+
+		<!-- Full-width images with number and caption text -->
+		<div class="verseSlides fade">
+		  <!-- <div class="numbertext">1 / 3</div> -->
+		  <img src="media/gallery/event1/event1_img1.jpg "style="width:100%">
+		  <!-- <div class="text">Caption Text</div> -->
 		</div>
+	  
+		<div class="verseSlides fade">
+		  <!-- <div class="numbertext">2 / 3</div> -->
+		  <img src="media/gallery/event1/event1_img2.jpg" style="width:100%">
+		  <!-- <div class="text">Caption Two</div> -->
+		</div>
+	  
+		<div class="verseSlides fade">
+		  <!-- <div class="numbertext">3 / 3</div> -->
+		  <img src="media/gallery/event1/event1_img3.jpg" style="width:100%">
+		  <!-- <div class="text">Caption Three</div> -->
+		</div>
+	</div>
+	
+	<!-- Div holding the dots -->
+	<div class="dot-class">
+		<span class="dot"></span>
+		<span class="dot"></span>
+		<span class="dot"></span>
+	</div>
+
+	<!-- Readding the container since the slideshow has to be out of it (width) -->
+	<div id="container">
 
 		<!-- Div holding the service timing and location icon -->
 		<div class="service_location">

@@ -91,7 +91,6 @@ window.onclick = function(event) {
 function changeForm(openForm,closeForm){
   document.getElementById(openForm).style.display = "flex";
   document.getElementById(closeForm).style.display = "none";
-
 }
 
 
@@ -213,15 +212,50 @@ function showSlides(n, eventClass) {
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 
-// Function to change images in the horizontal row
-let currentIndex = 0;
-const slides = document.querySelectorAll(".slide");
+// Function to show the slides in the verse section
+//Ensuring that verseSlides is defined when the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("DOM fully loaded and parsed");
+  let verseSlides = document.getElementsByClassName("verseSlides");
 
-function changeSlide() {
-  slides[currentIndex].classList.remove("active"); // Hide current image
-  currentIndex = (currentIndex + 1) % slides.length; // Move to next image
-  slides[currentIndex].classList.add("active"); // Show next image
-}
+  // Function to show the slides in the verse section
+  let verseSlideIndex = 0;
+  showSlidesVerse(); 
 
-setInterval(changeSlide, 1000); // Change image every 3 seconds
-        
+  // Function to show the slides in the verse section (based on slide number with delay)
+  function showSlidesVerse() {
+    console.log("showSlidesVerse function called");
+  
+    let i; // Loop variable
+    // if (verseSlides.length == 1) {
+    //   console.log("No verse slides found");
+    // }
+  
+    let dots = document.getElementsByClassName("dot");
+    // Hiding all slides initially
+    for (i = 0; i < verseSlides.length; i++) {
+      verseSlides[i].style.display = "none";
+    }
+    //Incrementing the slide index
+    verseSlideIndex++;
+    // If the slide index is greater than the total number of slides, set the slide index to 1 (resetting the slide index)
+    if (verseSlideIndex > verseSlides.length) {
+      verseSlideIndex = 1
+    }
+    // Changing the active dot
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    //Displaying the current slide
+    verseSlides[verseSlideIndex-1].style.display = "block";
+    dots[verseSlideIndex-1].className += " active";
+    
+    setTimeout(showSlidesVerse, 5000); // Change image every 2 seconds
+  }
+
+});
+
+
+
+
+
