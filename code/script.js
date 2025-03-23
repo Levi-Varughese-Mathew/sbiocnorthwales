@@ -1,14 +1,16 @@
 // Function to display the hamburger menu when icon is clicked
 function menuFunction() {
     var menu = document.getElementById("myLinks");
-    var mainContainer = document.getElementById("container");
+    // var mainContainer = document.getElementById("container");
+    var mainContainer = document.getElementById("outer-container");
+    // var slideShowContainer = document.getElementById("slideshow-container");
     var btnOpen = document.getElementById("btnOpenMenu");
     var btnClose = document.getElementById("btnCloseMenu");
     
     // If the menu is open, close it. If it is closed, open it
     if (menu.style.display == "block" ) {
       menu.style.display = "none";
-      mainContainer.style.display = "block";
+      mainContainer.style.display = "block"; //Displays the main container when the menu is closed
       btnClose.style.display = "none"; //Displays the menu icon when the menu is open
       btnOpen.style.display = "inline-block"; // Hides the close icon when the menu is open
       
@@ -17,7 +19,8 @@ function menuFunction() {
     // If the menu is closed, open it
     else {
       menu.style.display = "block";
-      mainContainer.style.display = "none";
+      mainContainer.style.display = "none"; //Hides the main container when the menu is open
+      slideShowContainer.style.display = "none"; //Hides the slideshow container when the menu is open
       btnOpen.style.display = "none"; // Hides the menu icon when the menu is open
       btnClose.style.display = "inline-block"; // Shows the close icon when the menu is open
       // menu.style.position = "absolute";
