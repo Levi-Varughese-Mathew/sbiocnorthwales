@@ -94,6 +94,16 @@ window.onclick = function(event) {
 function changeForm(openForm,closeForm){
   document.getElementById(openForm).style.display = "flex";
   document.getElementById(closeForm).style.display = "none";
+  //Adding and removing show from the buttons to show which one is opened
+
+  if (openForm == "contact-form") {
+    document.getElementById("btnContact").classList.add("show");
+    document.getElementById("btnPrayer").classList.remove("show");
+  }
+  else {
+    document.getElementById("btnPrayer").classList.add("show");
+    document.getElementById("btnContact").classList.remove("show");
+  }
 }
 
 
@@ -234,7 +244,7 @@ document.addEventListener("DOMContentLoaded", function () {
     //   console.log("No verse slides found");
     // }
   
-    let dots = document.getElementsByClassName("dot");
+    // let dots = document.getElementsByClassName("dot");
     // Hiding all slides initially
     for (i = 0; i < verseSlides.length; i++) {
       verseSlides[i].style.display = "none";
@@ -246,17 +256,31 @@ document.addEventListener("DOMContentLoaded", function () {
       verseSlideIndex = 1
     }
     // Changing the active dot
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
+    // for (i = 0; i < dots.length; i++) {
+    //   dots[i].className = dots[i].className.replace(" active", "");
+    // }
     //Displaying the current slide
     verseSlides[verseSlideIndex-1].style.display = "block";
-    dots[verseSlideIndex-1].className += " active";
+    // dots[verseSlideIndex-1].className += " active";
     
     setTimeout(showSlidesVerse, 8000); // Change image every 2 seconds
   }
 
 });
+
+
+// Function to show the info of the news/event
+function showEventInfo(eventInfo) {
+  // console.log("showInfo function called");
+  console.log(eventInfo);
+  var eventInfo = document.getElementById(eventInfo);
+  if (eventInfo.classList.contains("show")) {
+    eventInfo.classList.remove("show");
+  } else {
+    eventInfo.classList.add("show");
+  }
+}
+
 
 
 

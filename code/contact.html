@@ -134,13 +134,13 @@
 		<!-- <h1>CONTACT US</h1> -->
 		<div class="form-button-holder">
 			<!-- Buttons used to change forms -->
-			<button class="form-button" onclick="changeForm('contact-form','prayer-request-form')">Contact Us</button>
-			<button class="form-button" onclick="changeForm('prayer-request-form','contact-form')">Request Prayer</button>
+			<button class="form-button show" id="btnContact" onclick="changeForm('contact-form','prayer-request-form')">Contact Us</button>
+			<button class="form-button" id="btnPrayer"onclick="changeForm('prayer-request-form','contact-form')">Request Prayer</button>
 		</div>
 		
 
 		<!-- Contact form -->
-		<section class="contact-section" id="contact-form">
+		<section class="contact-section active" id="contact-form">
 			<div class="contact-intro">
 			  <h2 class="contact-title">Get in Touch</h2>
 			  <p class="contact-description">
