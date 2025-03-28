@@ -255,10 +255,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (verseSlideIndex > verseSlides.length) {
       verseSlideIndex = 1
     }
-    // Changing the active dot
-    // for (i = 0; i < dots.length; i++) {
-    //   dots[i].className = dots[i].className.replace(" active", "");
-    // }
+  
     //Displaying the current slide
     verseSlides[verseSlideIndex-1].style.display = "block";
     // dots[verseSlideIndex-1].className += " active";
