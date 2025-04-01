@@ -225,15 +225,20 @@ function showSlides(n, eventClass) {
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 
-// Function to show the slides in the verse section
+//Function to show the slides in the verse section
 //Ensuring that verseSlides is defined when the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
-  console.log("DOM fully loaded and parsed");
-  let verseSlides = document.getElementsByClassName("verseSlides");
+  // console.log("DOM fully loaded and parsed");
+  let verseSlides = document.getElementsByClassName("verseSlides"); // Used for bible verse slideshow
+  let patronSlides = document.getElementsByClassName("patronSaint"); //Used for patron saint divs
 
   // Function to show the slides in the verse section
   let verseSlideIndex = 0;
   showSlidesVerse(); 
+
+  // Function to show the patron saints
+  let patronSlideIndex = 0;
+  showPatronSaints(); 
 
   // Function to show the slides in the verse section (based on slide number with delay)
   function showSlidesVerse() {
@@ -263,10 +268,31 @@ document.addEventListener("DOMContentLoaded", function () {
     setTimeout(showSlidesVerse, 8000); // Change image every 2 seconds
   }
 
+
+  // Function to show patronSaints 
+  function showPatronSaints(){  
+    let j; 
+
+    // Hiding all slides initially
+    for (j = 0; j < patronSlides.length; j++) {
+      patronSlides[j].style.display = "none";
+      console.log("Hiden")
+    }
+    //Incrementing the slide index
+    patronSlideIndex++;
+    // If the slide index is greater than the total number of slides, set the slide index to 1 (resetting the slide index)
+    if (patronSlideIndex > patronSlides.length) {
+      patronSlideIndex = 1
+    }
+    //Displaying the current slide
+    patronSlides[patronSlideIndex-1].style.display = "flex";
+    setTimeout(showPatronSaints, 8000); // Change image every 2 seconds. This continously runs
+  }
+
 });
 
 
-// Function to show the info of the news/event
+// Function to show the info of the news/event in the home page
 function showEventInfo(eventInfo) {
   // console.log("showInfo function called");
   console.log(eventInfo);

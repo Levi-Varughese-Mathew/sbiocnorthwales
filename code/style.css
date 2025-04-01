@@ -474,10 +474,8 @@ html,body{
 	div.slideshow-patronSaint{	
 		display: flex;
 		border: 2px solid black;
-		
 	}
-
-
+	
 	.patronSaint{
 		display: flex;
 		flex-direction: row;
@@ -487,23 +485,31 @@ html,body{
 		/* width: 20%; */
 	}
 
+	/* Used to change the flow direction */
+	.patronSaint-reverse{
+		flex-direction: row-reverse;
+	}
+
+	/* Fading animation */
+	.fade {
+		animation: fade 1.5s;
+	}
+
 	div.patronSaint-image{
 		/* display: flex; */
-		width: 30%;
+		/* width: 30%; */
 		/* border: 2px solid black; */
-		
 	}
 
 	div.patronSaint img{
-		width: 100%;
+		/* width: 100%; */
 		border-radius: 10px;
-		/* height: 50%; */
 		max-width: 250px;
-		max-height: 300px;
+		max-height: 400px;
 	}
 
 	div.aboutSaint{
-		width: 70%;
+		/* width: 70%; */
 		padding-left: 10px;
 	}
 
@@ -1559,6 +1565,58 @@ html,body{
 		}
 	}
 	/* End of the slideshow css */
+
+	/* Styling for the patron saints slideshow */
+	div.slideshow-patronSaint{	
+		display: flex;
+		border: 2px solid black;
+	}
+	
+	.patronSaint{
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		border: 2px solid black;
+		padding: 10px;
+		border-radius: 10px;
+		/* width: 20%; */
+	}
+
+	/* Used to change the flow direction */
+	.patronSaint-reverse{
+		flex-direction: column;
+	}
+
+	/* Fading animation */
+	.fade {
+		animation: fade 1.5s;
+	}
+
+	div.patronSaint-image{
+		/* display: flex; */
+		/* width: 30%; */
+		/* border: 2px solid black; */
+	}
+
+	div.patronSaint img{
+		width: 100%;
+		border-radius: 10px;
+	}
+
+	div.aboutSaint{
+		/* width: 70%; */
+		padding-left: 10px;
+	}
+
+	div.patronSaint p{
+		margin-top: 0px;
+		text-align: center;
+	}
+
+	p.patronSaintName{
+		font-weight: bolder;
+		font-size: 1.5rem;
+	}
 
 	/* To align elements in the division (service timing and location) */
 	div.service_location{
