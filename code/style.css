@@ -495,11 +495,11 @@ html,body{
 		animation: fade 1.5s;
 	}
 
-	div.patronSaint-image{
+	/* div.patronSaint-image{ */
 		/* display: flex; */
 		/* width: 30%; */
 		/* border: 2px solid black; */
-	}
+	/* } */
 
 	div.patronSaint img{
 		/* width: 100%; */
@@ -1592,11 +1592,11 @@ html,body{
 		animation: fade 1.5s;
 	}
 
-	div.patronSaint-image{
+	/* div.patronSaint-image{ */
 		/* display: flex; */
 		/* width: 30%; */
 		/* border: 2px solid black; */
-	}
+	/* } */
 
 	div.patronSaint img{
 		width: 100%;
