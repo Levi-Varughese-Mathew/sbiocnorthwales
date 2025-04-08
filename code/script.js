@@ -3,7 +3,7 @@ function menuFunction() {
     var menu = document.getElementById("myLinks");
     // var mainContainer = document.getElementById("container");
     var mainContainer = document.getElementById("outer-container");
-    // var slideShowContainer = document.getElementById("slideshow-container");
+    var slideShowContainer = document.getElementById("slideshow-container");
     var btnOpen = document.getElementById("btnOpenMenu");
     var btnClose = document.getElementById("btnCloseMenu");
     
@@ -12,21 +12,32 @@ function menuFunction() {
       menu.style.display = "none";
       mainContainer.style.display = "block"; //Displays the main container when the menu is closed
       btnClose.style.display = "none"; //Displays the menu icon when the menu is open
-      btnOpen.style.display = "inline-block"; // Hides the close icon when the menu is open
+      btnOpen.style.display = "inline-block"; // Hides the close icon when the menu is open   
       
-      
+      //If element with "slideshow-container" id is not found, then show the main container
+      if (slideShowContainer != null) {
+        slideShowContainer.style.display = "block"; //Displays the slideshow container when the menu is closed
+      }else{
+        console.log("Slideshow container not found");
+      }
     } 
     // If the menu is closed, open it
     else {
       menu.style.display = "block";
       mainContainer.style.display = "none"; //Hides the main container when the menu is open
-      slideShowContainer.style.display = "none"; //Hides the slideshow container when the menu is open
+      
       btnOpen.style.display = "none"; // Hides the menu icon when the menu is open
       btnClose.style.display = "inline-block"; // Shows the close icon when the menu is open
       // menu.style.position = "absolute";
       menu.style.width = "100%";
-      menu.style.height = "70vh";
+      menu.style.minHeight = "70vh";
       // menu.style.marginleft = "-10pmenu"
+
+      if (slideShowContainer != null) {
+        slideShowContainer.style.display = "none"; //Hides the slideshow container when the menu is open
+      }else{
+        console.log("Slideshow container not found");
+      }
     }
 
   }
@@ -35,7 +46,9 @@ function menuFunction() {
   function showContainer() {
     var navBar = document.getElementById("navBar");
     var menu = document.getElementById("myLinks");
-    var mainContainer = document.getElementById("container");
+    // var mainContainer = document.getElementById("container");
+    var mainContainer = document.getElementById("outer-container");
+    var slideShowContainer = document.getElementById("slideshow-container");
 
     var btnOpen = document.getElementById("btnOpenMenu");
     var btnClose = document.getElementById("btnCloseMenu");
@@ -45,14 +58,15 @@ function menuFunction() {
     
     // Showing main container when the window is resized
     mainContainer.style.display = "block";
+    //  This is done because the slideshow container is outside the mainCoontainer
+    slideShowContainer.style.display = "block"; // Shows the slideshow container when the menu is closed. 
+                                            
     
     //Showing the btnOpenMenu when the window is resized and page is in mobile view. Done by checking if navigation bar is visible or not
     if (window.getComputedStyle(navBar).display == "none") {
-      // console.log("Navbar is hidden");
       btnOpen.style.display = "inline-block";
       btnClose.style.display = "none";
     } else {
-      // console.log("Navbar is visible");
       btnOpen.style.display = "none";
       btnClose.style.display = "none";
     }    
@@ -276,7 +290,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Hiding all slides initially
     for (j = 0; j < patronSlides.length; j++) {
       patronSlides[j].style.display = "none";
-      console.log("Hiden")
+      console.log("Hidden")
     }
     //Incrementing the slide index
     patronSlideIndex++;
@@ -301,6 +315,18 @@ function showEventInfo(eventInfo) {
     eventInfo.classList.remove("show");
   } else {
     eventInfo.classList.add("show");
+  }
+}
+
+// Function to show the info of the news/event in the home page
+function showDownloadsInfo(downloadsInfo) {
+  // console.log("showInfo function called");
+  console.log(downloadsInfo);
+  var downloadsInfo = document.getElementById(downloadsInfo);
+  if (downloadsInfo.classList.contains("show")) {
+    downloadsInfo.classList.remove("show");
+  } else {
+    downloadsInfo.classList.add("show");
   }
 }
 

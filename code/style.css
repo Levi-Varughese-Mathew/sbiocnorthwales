@@ -551,7 +551,8 @@ html,body{
 	}
 
 	/* Styling for the news and events div and content inside */
-	.news-events{
+	/* Also used for the downloads element */
+	.news-events, .downloads{
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-evenly;
@@ -562,52 +563,53 @@ html,body{
 		margin-bottom: 10px;
 	}
 
-	.newsEvents-info{
+	.newsEvents-info, .downloadsTopic-info{
 		/* background-color: #f0f0f0; */
-		background-color: #ad000049;
+		background-color: #AD0000;
 		width: 300px;
 		border-radius: 10px;
 		padding: 10px;
 		margin: 5px;
 		transform: translateY(-5px); /* Lift on Hover */
-  		box-shadow: rgba(0, 0, 0, 0.2); /* Stronger Shadow on Hover */
 	}
 
-	.newsEvents-info:hover{
+	.newsEvents-info:hover, .downloadsTopic-info:hover{
 		transform: translateY(-5px); /* Lift on Hover */
   		box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2); /* Stronger Shadow on Hover */
 	}
 
-	.news-events a:hover{
+	.news-events a:hover, .downloads a:hover{
 		cursor: pointer;
 		text-decoration: underline;
+		color: rgb(207, 207, 230);
 	}
 
-	.news-events p, .news-events h1, .news-events a{
+	.news-events p, .news-events h1, .news-events a, .downloads p, .downloads h1, .downloads a{
 		background-color: transparent;
-		color: #000000;
+		color: #ffffff;
 		text-align: left;
 	}
 
-	.news-events p{
-		color:#615a5a;
+	.news-events p, .downloads p{
+		color:#ffffff;
 		margin: 0px
 	}
 
-	.news-events h1{
+	.news-events h1, .downloads h1{
 		margin-top: 0px;
 	}
 
+	
 	/* Style when hidden and shown */
-	p.event-info {
-		color:#000000;
+	p.event-info, p.downloads-info {
+		color:#ffffff;
 		opacity: 0; /* Start fully transparent */
 		max-height: 0; /* Start with no height */
 		overflow: hidden; /* Hide overflowing content */
 		transition: opacity 0.3s ease, max-height 0.3s ease; /* Smooth transition for opacity and height */
 	}
 	
-	p.event-info.show {
+	p.event-info.show, p.downloads-info.show {
 		opacity: 1; /* Fully visible */
 		max-height: 500px; /* Set a maximum height (adjust as needed) */
 	}
@@ -1818,7 +1820,7 @@ html,body{
 
 	/* Style the navigation menu */
 	.topnav {
-		overflow: hidden;
+		/* overflow: hidden; */
 		background-color: #fffafa;	
 		margin-top: auto;
 		display: block;	
@@ -2107,7 +2109,7 @@ html,body{
 	}
 	
 	/* Styling for the news and events div and content inside */
-	.news-events{
+	.news-events, .downloads{
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-evenly;
@@ -2118,9 +2120,9 @@ html,body{
 		margin-bottom: 10px;
 	}
 
-	.newsEvents-info{
+	.newsEvents-info, .downloadsTopic-info{
 		/* background-color: #f0f0f0; */
-		background-color: #ad000049;
+		background-color: #ad0000;
 		width: 300px;
 		border-radius: 10px;
 		padding: 10px;
@@ -2129,33 +2131,35 @@ html,body{
   		box-shadow: rgba(0, 0, 0, 0.2); /* Stronger Shadow on Hover */
 	}
 
-	.newsEvents-info:hover{
+	.newsEvents-info:hover, .downloadsTopic-info:hover{
 		transform: translateY(-5px); /* Lift on Hover */
   		box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2); /* Stronger Shadow on Hover */
 	}
 
-	.news-events a:hover{
+	.news-events a:hover, .downloads a:hover{
 		cursor: pointer;
 		text-decoration: underline;
+		color: rgb(207, 207, 230);
 	}
 
-	.news-events p, .news-events h1, .news-events a{
+	.news-events p, .news-events h1, .news-events a, .downloads p, .downloads h1, .downloads a{
 		background-color: transparent;
-		color: #000000;
+		color: #ffffff;
 		text-align: left;
 	}
 
-	.news-events p{
-		color:#615a5a;
+	.news-events p, .downloads p{
+		color:#ffffff;
 		margin: 0px
 	}
 
-	.news-events h1{
+	.news-events h1, .downloads h1{
 		margin-top: 0px;
 	}
 
+	
 	/* Style when hidden and shown */
-	p.event-info {
+	p.event-info, p.downloads-info {
 		color:#000000;
 		opacity: 0; /* Start fully transparent */
 		max-height: 0; /* Start with no height */
@@ -2163,10 +2167,11 @@ html,body{
 		transition: opacity 0.3s ease, max-height 0.3s ease; /* Smooth transition for opacity and height */
 	}
 	
-	p.event-info.show {
+	p.event-info.show, p.downloads-info.show {
 		opacity: 1; /* Fully visible */
 		max-height: 500px; /* Set a maximum height (adjust as needed) */
 	}
+
 	.map-embed{
 		width:100%;
 		height: 100%;
@@ -2296,9 +2301,9 @@ html,body{
 	}
 
 	/* Changes the colour of the hamburger menu */
-	a:link {
+	/* a:link {
 		color: rgb(0, 0, 0);
-	}
+	} */
 
 	.footer a:link {
 		color: rgb(255, 255, 255);

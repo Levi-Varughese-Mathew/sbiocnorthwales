@@ -134,130 +134,132 @@
 
 	
 
-	<!--Container where all the information for the pages will go  -->
-	<div id="container">
-		
-		<!-- <h1>CONTACT US</h1> -->
-		<div class="form-button-holder">
-			<!-- Buttons used to change forms -->
-			<button class="form-button show" id="btnContact" onclick="changeForm('contact-form','prayer-request-form')">Contact Us</button>
-			<button class="form-button" id="btnPrayer"onclick="changeForm('prayer-request-form','contact-form')">Request Prayer</button>
-		</div>
-		
-
-		<!-- Contact form -->
-		<section class="contact-section active" id="contact-form">
-			<div class="contact-intro">
-			  <h2 class="contact-title">Get in Touch</h2>
-			  <p class="contact-description">
-				Fill out the form below and we'll get back to you as soon as possible.
-			  </p>
-			</div>
-		  
-			<form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-
-			<!-- access_key is currently set to levivarghesemathew@gmail.com. To change the mail new key has to be created -->
-			  <input type="hidden" name="access_key" value="6c8aca82-3f72-4554-8a66-b8e5c67a3fde" />
-			  <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
-			  <input type="hidden" name="from_name" value="My Website" />
-			  <!-- More customisation options available in the docs: https://docs.web3forms.com -->
+	<div id="outer-container">
+		<!--Container where all the information for the pages will go  -->
+		<div id="container">
 			
-			  <!-- Added to redirect after submission -->
-			  <input type="hidden" name="redirect" value="https://levi-varughese-mathew.github.io/sbiocnorthwales/code/contact.html" />
-
-			  <div class="form-group-container">
-				<div class="form-group">
-				  <label for="name" class="form-label">Name</label>
-				  <input id="name" name="name" class="form-input" placeholder="Your name" type="text" required />
-				</div>
-				<div class="form-group">
-				  <label for="email" class="form-label">Email</label>
-				  <input id="email" name="email" class="form-input" placeholder="Your email" type="email" required />
-				</div>
-				<div class="form-group">
-				  <label for="phone" class="form-label">Phone</label>
-				  <input id="phone" name="phone" class="form-input" placeholder="+44 56789 98765" type="text" required/>
-				</div>
-				<div class="form-group">
-				  <label for="message" class="form-label">Message</label>
-				  <textarea class="form-textarea" id="message" name="message" placeholder="Your message"></textarea>
-				</div>
-			  </div>
-			  <button class="form-submit" type="submit">Send Message</button>
-			  <button class="form-submit" type="reset">Reset</button>
-			</form>
-		  
-		</section>
+			<!-- <h1>CONTACT US</h1> -->
+			<div class="form-button-holder">
+				<!-- Buttons used to change forms -->
+				<button class="form-button show" id="btnContact" onclick="changeForm('contact-form','prayer-request-form')">Contact Us</button>
+				<button class="form-button" id="btnPrayer"onclick="changeForm('prayer-request-form','contact-form')">Request Prayer</button>
+			</div>
 			
 
-		<!--Prayer request form (template used) -->
-		<section class="contact-section" id="prayer-request-form">
-			<div class="contact-intro">
-			<h2 class="contact-title">Request Prayer</h2>
-			<p class="contact-description">
-				Fill out the form below and we'll include you in the prayers.
-			</p>
-			</div>
-		
-			<form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
-
-			<!-- access_key is currently set to levivarghesemathew@gmail.com. To change the mail new key has to be created -->
-			<input type="hidden" name="access_key" value="6c8aca82-3f72-4554-8a66-b8e5c67a3fde" />
-			<input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
-			<input type="hidden" name="from_name" value="My Website" />
-			<!-- More customisation options available in the docs: https://docs.web3forms.com -->
+			<!-- Contact form -->
+			<section class="contact-section active" id="contact-form">
+				<div class="contact-intro">
+				<h2 class="contact-title">Get in Touch</h2>
+				<p class="contact-description">
+					Fill out the form below and we'll get back to you as soon as possible.
+				</p>
+				</div>
 			
-			<!-- Added to redirect after submission -->
-			<input type="hidden" name="redirect" value="https://levi-varughese-mathew.github.io/sbiocnorthwales/code/contact.html" />
+				<form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
 
-			<div class="form-group-container">
-				<div class="form-group">
-				<label for="name" class="form-label">Name</label>
-				<input id="name" name="name" class="form-input" placeholder="Your name" type="text" required/>
+				<!-- access_key is currently set to levivarghesemathew@gmail.com. To change the mail new key has to be created -->
+				<input type="hidden" name="access_key" value="6c8aca82-3f72-4554-8a66-b8e5c67a3fde" />
+				<input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
+				<input type="hidden" name="from_name" value="My Website" />
+				<!-- More customisation options available in the docs: https://docs.web3forms.com -->
+				
+				<!-- Added to redirect after submission -->
+				<input type="hidden" name="redirect" value="https://levi-varughese-mathew.github.io/sbiocnorthwales/code/contact.html" />
+
+				<div class="form-group-container">
+					<div class="form-group">
+					<label for="name" class="form-label">Name</label>
+					<input id="name" name="name" class="form-input" placeholder="Your name" type="text" required />
+					</div>
+					<div class="form-group">
+					<label for="email" class="form-label">Email</label>
+					<input id="email" name="email" class="form-input" placeholder="Your email" type="email" required />
+					</div>
+					<div class="form-group">
+					<label for="phone" class="form-label">Phone</label>
+					<input id="phone" name="phone" class="form-input" placeholder="+44 56789 98765" type="text" required/>
+					</div>
+					<div class="form-group">
+					<label for="message" class="form-label">Message</label>
+					<textarea class="form-textarea" id="message" name="message" placeholder="Your message"></textarea>
+					</div>
 				</div>
-				<div class="form-group">
-				<label for="phone" class="form-label">Phone</label>
-				<input id="phone" name="phone" class="form-input" placeholder="+44 56789 98765" type="text" required/>
+				<button class="form-submit" type="submit">Send Message</button>
+				<button class="form-submit" type="reset">Reset</button>
+				</form>
+			
+			</section>
+				
+
+			<!--Prayer request form (template used) -->
+			<section class="contact-section" id="prayer-request-form">
+				<div class="contact-intro">
+				<h2 class="contact-title">Request Prayer</h2>
+				<p class="contact-description">
+					Fill out the form below and we'll include you in the prayers.
+				</p>
 				</div>
-				<div class="form-group">
-					<label for="message" class="form-label">Names to be remembered</label>
-					<textarea class="form-textarea-request-prayer" id="message" name="message" placeholder="Blessing"></textarea>
-					<textarea class="form-textarea-request-prayer" id="message" name="message" placeholder="Sick"></textarea>
-					<textarea class="form-textarea-request-prayer" id="message" name="message" placeholder="Departed"></textarea>
-					<textarea class="form-textarea-request-prayer" id="message" name="message" placeholder="Birthday"></textarea>
-					<textarea class="form-textarea-request-prayer" id="message" name="message" placeholder="Wedding anniversary"></textarea>
+			
+				<form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+				<!-- access_key is currently set to levivarghesemathew@gmail.com. To change the mail new key has to be created -->
+				<input type="hidden" name="access_key" value="6c8aca82-3f72-4554-8a66-b8e5c67a3fde" />
+				<input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
+				<input type="hidden" name="from_name" value="My Website" />
+				<!-- More customisation options available in the docs: https://docs.web3forms.com -->
+				
+				<!-- Added to redirect after submission -->
+				<input type="hidden" name="redirect" value="https://levi-varughese-mathew.github.io/sbiocnorthwales/code/contact.html" />
+
+				<div class="form-group-container">
+					<div class="form-group">
+					<label for="name" class="form-label">Name</label>
+					<input id="name" name="name" class="form-input" placeholder="Your name" type="text" required/>
+					</div>
+					<div class="form-group">
+					<label for="phone" class="form-label">Phone</label>
+					<input id="phone" name="phone" class="form-input" placeholder="+44 56789 98765" type="text" required/>
+					</div>
+					<div class="form-group">
+						<label for="message" class="form-label">Names to be remembered</label>
+						<textarea class="form-textarea-request-prayer" id="message" name="message" placeholder="Blessing"></textarea>
+						<textarea class="form-textarea-request-prayer" id="message" name="message" placeholder="Sick"></textarea>
+						<textarea class="form-textarea-request-prayer" id="message" name="message" placeholder="Departed"></textarea>
+						<textarea class="form-textarea-request-prayer" id="message" name="message" placeholder="Birthday"></textarea>
+						<textarea class="form-textarea-request-prayer" id="message" name="message" placeholder="Wedding anniversary"></textarea>
+					</div>
 				</div>
-			</div>
-			<button class="form-submit" type="submit">Send Message</button>
-			<button class="form-submit" type="reset">Reset</button>
-			</form>
-		
-		</section>
+				<button class="form-submit" type="submit">Send Message</button>
+				<button class="form-submit" type="reset">Reset</button>
+				</form>
+			
+			</section>
 
-		<div class="direction" id="direction">
-			<div class="direction-info">
-				<h1>Service Timing</h1>
-					<h2>Morning Prayer</h2>
-						<p>
-							Every Second Saturday of the month<br>
-							Starts at: 9:30 am 
-						</p>
+			<div class="direction" id="direction">
+				<div class="direction-info">
+					<h1>Service Timing</h1>
+						<h2>Morning Prayer</h2>
+							<p>
+								Every Second Saturday of the month<br>
+								Starts at: 9:30 am 
+							</p>
 
-					<h2>Holy Qurbana</h2>
-						<p> 
-							Every Second Saturday of the month<br>
-							Starts at 10:30 am
-						</p>
+						<h2>Holy Qurbana</h2>
+							<p> 
+								Every Second Saturday of the month<br>
+								Starts at 10:30 am
+							</p>
 
-					<h2>Address</h2>
-						<p>
-							St.Michael & All Angels Church<br>
-							Glyn Y Marl Road<br>
-							Llandudno Junction, LL31 9NS<br>
-						</p>			
-			</div>
-			<div class="map-embed">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2385.1584850196!2d-3.8045674!3d53.286696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48651ef5e82d283f%3A0x29c0422c2471bc67!2sSt%20Michael%20%26%20All%20Angels%20Church!5e0!3m2!1sen!2suk!4v1742307741960!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+						<h2>Address</h2>
+							<p>
+								St.Michael & All Angels Church<br>
+								Glyn Y Marl Road<br>
+								Llandudno Junction, LL31 9NS<br>
+							</p>			
+				</div>
+				<div class="map-embed">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2385.1584850196!2d-3.8045674!3d53.286696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48651ef5e82d283f%3A0x29c0422c2471bc67!2sSt%20Michael%20%26%20All%20Angels%20Church!5e0!3m2!1sen!2suk!4v1742307741960!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
 			</div>
 		</div>
 	</div>	

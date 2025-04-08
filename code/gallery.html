@@ -127,235 +127,232 @@
 				</div>
 					
 			</div>
-			<!-- <a class="links" href="organisations.html">ORGANISATIONS</a> -->
 			<a class="links" href="gallery.html">GALLERY</a>
 			<a class="links" href="contact.html">CONTACT</a>
 		</div>		
 	</div>
 
-	<!--Container where all the information for the pages will go  -->
-	<div id="container">
+	<div id="outer-container">
+		<!--Container where all the information for the pages will go  -->
+		<div id="container">
+			
+			<h1>GALLERY</h1>
 		
-		<h1>GALLERY</h1>
-	
-		<!-- Thumbnails -->
-		<div class="row">
+			<!-- Thumbnails -->
+			<div class="row">
 
-			<!-- Event 1 -->
-			<div class="column">
-				<!-- Thumbnail for event 1 -->
-				<!-- <img src="media/gallery/event1/event1_img1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow"> -->
-				<img src="media/gallery/event1/event1_img1.jpg" onclick="openModal('event1');currentSlide(1,'event1')" class="hover-shadow">
-				<!-- Caption under thumbnail -->
-				<p>General Body 2025</p> 
-			</div>
-
-			<!-- Event 2 -->
-			<div class="column">
-				<!-- Thumbnail for event 2 -->
-				<img src="media/gallery/event2/event2_img1.jpg" onclick="openModal('event2');currentSlide(1,'event2')" class="hover-shadow">
-				<!-- Caption under thumbnail -->
-				<p>General Body 2025</p>
-			</div>			
-		</div>
-		
-		<br>
-
-		<!-- The actual slides (opened when the thumbnails are clicked). Hidden by default. -->
-		<!-- The Modal/Lightbox -->
-		<div id="myModal" class="modal">
-			<!-- Close button -->
-			<span class="close cursor" onclick="closeModal()">&times;</span>
-
-			<!-- Image gallery and slideshow -->
-			<div class="modal-content">
-			
-				<!-- Div for the slide images. Used to adjust the next and prev positions -->
-				<div style="position: relative;">
-					<!-- Image shown after clicking -->
-					<!-- Enlarged images -->
-					<!-- The number of images here should be same as the rows -->
-					<!-- Images for event 1 -->
-					<div class="mySlides event1">
-						<div class="numbertext">1 / 3</div>
-						<img src="media/gallery/event1/event1_img1.jpg" >
-					</div>
-					<div class="mySlides event1">
-						<div class="numbertext">2 / 3</div>
-						<img src="media/gallery/event1/event1_img2.jpg" >
-					</div>			
-					<div class="mySlides event1">
-						<div class="numbertext">3 / 3</div>
-						<img src="media/gallery/event1/event1_img3.jpg" >
-					</div>
-
-					<!-- Images for event 2 -->
-					<div class="mySlides event2">
-						<div class="numbertext">1 / 3</div>
-						<img src="media/gallery/event2/event2_img1.jpg">
-					</div>
-					<div class="mySlides event2">
-						<div class="numbertext">2 / 3</div>
-						<img src="media/gallery/event2/event2_img2.jpg">
-					</div>				
-					<div class="mySlides event2">
-						<div class="numbertext">3 / 3</div>
-						<img src="media/gallery/event2/event2_img3.jpg">
-					</div>
-							
-					<!-- Next/previous controls. These are shown when the modal box is open -->
-					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				<!-- Event 1 -->
+				<div class="column">
+					<!-- Thumbnail for event 1 -->
+					<!-- <img src="media/gallery/event1/event1_img1.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow"> -->
+					<img src="media/gallery/event1/event1_img1.jpg" onclick="openModal('event1');currentSlide(1,'event1')" class="hover-shadow">
+					<!-- Caption under thumbnail -->
+					<p>General Body 2025</p> 
 				</div>
-			
-				<!-- Caption text -->
-				<div class="caption-container">
-					<p id="caption"></p>
-				</div>
-			
-				<div>
-				<!-- Row images for event 1-->
-					<div class="row event1">
-						<!-- Thumbnail image controls -->
-						<!-- Thumbnails for images in the row shown when model box is opened -->
-						<!-- The alt text is used for the caption of the image when the modal box is opened -->
-						<div class="column">
-							<img class="demo event1" src="media/gallery/event1/event1_img1.jpg" onclick="currentSlide(1,'event1')" alt="image 1">
-						</div>
-					
-						<div class="column">
-							<img class="demo event1" src="media/gallery/event1/event1_img2.jpg" onclick="currentSlide(2,'event1')" alt="image 2">
-						</div>
-					
-						<div class="column">
-							<img class="demo event1" src="media/gallery/event1/event1_img3.jpg" onclick="currentSlide(3,'event1')" alt="image 3">
-						</div>		
 
+				<!-- Event 2 -->
+				<div class="column">
+					<!-- Thumbnail for event 2 -->
+					<img src="media/gallery/event2/event2_img1.jpg" onclick="openModal('event2');currentSlide(1,'event2')" class="hover-shadow">
+					<!-- Caption under thumbnail -->
+					<p>General Body 2025</p>
+				</div>			
+			</div>
+			
+			<br>
+
+			<!-- The actual slides (opened when the thumbnails are clicked). Hidden by default. -->
+			<!-- The Modal/Lightbox -->
+			<div id="myModal" class="modal">
+				<!-- Close button -->
+				<span class="close cursor" onclick="closeModal()">&times;</span>
+
+				<!-- Image gallery and slideshow -->
+				<div class="modal-content">
+				
+					<!-- Div for the slide images. Used to adjust the next and prev positions -->
+					<div style="position: relative;">
+						<!-- Image shown after clicking -->
+						<!-- Enlarged images -->
+						<!-- The number of images here should be same as the rows -->
+						<!-- Images for event 1 -->
+						<div class="mySlides event1">
+							<div class="numbertext">1 / 3</div>
+							<img src="media/gallery/event1/event1_img1.jpg" >
+						</div>
+						<div class="mySlides event1">
+							<div class="numbertext">2 / 3</div>
+							<img src="media/gallery/event1/event1_img2.jpg" >
+						</div>			
+						<div class="mySlides event1">
+							<div class="numbertext">3 / 3</div>
+							<img src="media/gallery/event1/event1_img3.jpg" >
+						</div>
+
+						<!-- Images for event 2 -->
+						<div class="mySlides event2">
+							<div class="numbertext">1 / 3</div>
+							<img src="media/gallery/event2/event2_img1.jpg">
+						</div>
+						<div class="mySlides event2">
+							<div class="numbertext">2 / 3</div>
+							<img src="media/gallery/event2/event2_img2.jpg">
+						</div>				
+						<div class="mySlides event2">
+							<div class="numbertext">3 / 3</div>
+							<img src="media/gallery/event2/event2_img3.jpg">
+						</div>
+								
+						<!-- Next/previous controls. These are shown when the modal box is open -->
+						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1)">&#10095;</a>
 					</div>
+				
+					<!-- Caption text -->
+					<div class="caption-container">
+						<p id="caption"></p>
+					</div>
+				
+					<div>
+					<!-- Row images for event 1-->
+						<div class="row event1">
+							<!-- Thumbnail image controls -->
+							<!-- Thumbnails for images in the row shown when model box is opened -->
+							<!-- The alt text is used for the caption of the image when the modal box is opened -->
+							<div class="column">
+								<img class="demo event1" src="media/gallery/event1/event1_img1.jpg" onclick="currentSlide(1,'event1')" alt="image 1">
+							</div>
+						
+							<div class="column">
+								<img class="demo event1" src="media/gallery/event1/event1_img2.jpg" onclick="currentSlide(2,'event1')" alt="image 2">
+							</div>
+						
+							<div class="column">
+								<img class="demo event1" src="media/gallery/event1/event1_img3.jpg" onclick="currentSlide(3,'event1')" alt="image 3">
+							</div>		
 
-					<!-- Row images for event 2 -->
-					<div class="row event2">
-						<div class="column">
-							<img class="demo event2" src="media/gallery/event2/event2_img1.jpg" onclick="currentSlide(1,'event2')" alt="image 1">
 						</div>
-					
-						<div class="column">
-							<img class="demo event2" src="media/gallery/event2/event2_img2.jpg" onclick="currentSlide(2,'event2')" alt="image 2">
-						</div>
-					
-						<div class="column">
-							<img class="demo event2" src="media/gallery/event2/event2_img3.jpg" onclick="currentSlide(3,'event2')" alt="image 3">
+
+						<!-- Row images for event 2 -->
+						<div class="row event2">
+							<div class="column">
+								<img class="demo event2" src="media/gallery/event2/event2_img1.jpg" onclick="currentSlide(1,'event2')" alt="image 1">
+							</div>
+						
+							<div class="column">
+								<img class="demo event2" src="media/gallery/event2/event2_img2.jpg" onclick="currentSlide(2,'event2')" alt="image 2">
+							</div>
+						
+							<div class="column">
+								<img class="demo event2" src="media/gallery/event2/event2_img3.jpg" onclick="currentSlide(3,'event2')" alt="image 3">
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		
-		<h1>DOWNLOADS</h1>
-
-		<div class="news-events">
-			<div class="newsEvents-info">
-				<h1>Qurbana Kramam</h1>
-				<!-- <a onmouseover="showEventInfo('event1')" onmouseleave="showEventInfo('event1')">Read More</a> -->
-				<a onclick="showEventInfo('event1')">Show More</a>
-				<p class="event-info" id="event1">
-					<a href="media/churchResources/QurbanaKramam_Malayalam.pdf" target="_blank">Qurbana Kramam (Malayalam)</a>
-					<a href="media/churchResources/QurbanaKramam_English.pdf" target="_blank">Qurbana Kramam (English)</a>
-					<a href="media/churchResources/QurbanaKramam_MalayalamAndEnglish.pdf" target="_blank">Qurbana Kramam (Malayalam & English)</a><br>
-					<a href="media/churchResources/QurbanaKramam_MalayalamAndManglish.pdf" target="_blank">Qurbana Kramam (Malayalam & Manglish)</a>
-				</p>
-			</div>
-
-			<div class="newsEvents-info">
-				<h1>A Guide During Lent</h1>
-				<a onclick="showEventInfo('event2')">Show More</a>
-				
-				<p class="event-info" id="event2">
-					<a href="media/churchResources/LentGuide.pdf" target="_blank">Lent Guide</a><br>
-				</p>
-			</div>
-
-			<div class="newsEvents-info">
-				<h1>Great Lent</h1>
-				
-				<a onclick="showEventInfo('event3')">Show More</a>
-				<p class="event-info" id="event3">
-					<a href="media/churchResources/ValiyaNombuPrarthanakal.pdf" target="_blank">Valiya Nombu Prarthanakal</a><br>
-					<a href="media/churchResources/GreatLentPrayer_Malayalam.pdf" target="_blank">Great Lent Prayer (Malayalam)</a><br>
-					<a href="media/churchResources/HolyWeekGospelReadings.pdf" target="_blank">Holy Week Gospel Readings</a><br>
-				</p>
-			</div>
-
-			<div class="newsEvents-info">
-				<h1>Prayers</h1>
-				
-				<a onclick="showEventInfo('event4')">Show More</a>
-				
-				<p class="event-info" id="event4">
-					<a href="media/churchResources/MorningPrayer.pdf" target="_blank">Morning Prayer</a><br>
-					<a href="media/churchResources/EveningPrayer_Malayalam.pdf" target="_blank">Evening Prayer</a><br>
-				</p>
-			</div>
-
-			<div class="newsEvents-info">
-				<h1>Yeldo Service</h1>
-				
-				<a onclick="showEventInfo('event5')">Show More</a>
-				
-				<p class="event-info" id="event5">
-					<a href="media/churchResources/YeldoChristmasService.pdf" target="_blank">Malayalam & Manglish</a><br>
-				</p>
-			</div>
-
 			
+			<h1>DOWNLOADS</h1>
 
-			<div class="newsEvents-info">
-				<h1>Maundy Thursday (Pesaha)</h1>
+			<div class="downloads">
+				<div class="downloadsTopic-info">
+					<h1>Qurbana Kramam</h1>
+					<a onclick="showDownloadsInfo('topic1')">Show More</a>
+					<p class="downloads-info" id="topic1">
+						<a href="media/churchResources/QurbanaKramam_Malayalam.pdf" target="_blank">• Qurbana Kramam (Malayalam)</a>
+						<a href="media/churchResources/QurbanaKramam_English.pdf" target="_blank">• Qurbana Kramam (English)</a>
+						<a href="media/churchResources/QurbanaKramam_MalayalamAndEnglish.pdf" target="_blank">• Qurbana Kramam (Malayalam & English)</a><br>
+						<a href="media/churchResources/QurbanaKramam_MalayalamAndManglish.pdf" target="_blank">• Qurbana Kramam (Malayalam & Manglish)</a>
+					</p>
+				</div>
+
+				<div class="downloadsTopic-info">
+					<h1>A Guide During Lent</h1>
+					<a onclick="showDownloadsInfo('topic2')">Show More</a>
+					
+					<p class="downloads-info" id="topic2">
+						<a href="media/churchResources/LentGuide.pdf" target="_blank">• Lent Guide</a><br>
+					</p>
+				</div>
+
+				<div class="downloadsTopic-info">
+					<h1>Great Lent</h1>
+					
+					<a onclick="showDownloadsInfo('topic3')">Show More</a>
+					<p class="downloads-info" id="topic3">
+						<a href="media/churchResources/ValiyaNombuPrarthanakal.pdf" target="_blank">• Valiya Nombu Prarthanakal</a><br>
+						<a href="media/churchResources/GreatLentPrayer_Malayalam.pdf" target="_blank">• Great Lent Prayer (Malayalam)</a><br>
+						<a href="media/churchResources/HolyWeekGospelReadings.pdf" target="_blank">• Holy Week Gospel Readings</a><br>
+					</p>
+				</div>
+
+				<div class="downloadsTopic-info">
+					<h1>Prayers</h1>
+					
+					<a onclick="showDownloadsInfo('topic4')">Show More</a>
+					
+					<p class="downloads-info" id="topic4">
+						<a href="media/churchResources/MorningPrayer.pdf" target="_blank">• Morning Prayer</a><br>
+						<a href="media/churchResources/EveningPrayer_Malayalam.pdf" target="_blank">• Evening Prayer</a><br>
+					</p>
+				</div>
+
+				<div class="downloadsTopic-info">
+					<h1>Yeldo Service</h1>
+					
+					<a onclick="showDownloadsInfo('topic5')">Show More</a>
+					
+					<p class="downloads-info" id="topic5">
+						<a href="media/churchResources/YeldoChristmasService.pdf" target="_blank">• Malayalam & Manglish</a><br>
+					</p>
+				</div>
+
 				
-				<a onclick="showEventInfo('event6')">Show More</a>
-				
-				<p class="event-info" id="event6">
-					<a href="media/churchResources/MaundyThursdayMorning.pdf" target="_blank">Morning</a><br>
-					<a href="media/churchResources/MaundyThursdaySoothara.pdf" target="_blank">Soothara</a><br>
-					<a href="media/churchResources/MaundyThursdayEvening.pdf" target="_blank">Evening</a><br>
-					<a href="media/churchResources/MaundyThursdayManglish.pdf" target="_blank">Evening (Manglish)</a><br>
-				</p>
+
+				<div class="downloadsTopic-info">
+					<h1>Maundy Thursday (Pesaha)</h1>
+					
+					<a onclick="showDownloadsInfo('topic6')">Show More</a>
+					
+					<p class="downloads-info" id="topic6">
+						<a href="media/churchResources/MaundyThursdayMorning.pdf" target="_blank">• Morning</a><br>
+						<a href="media/churchResources/MaundyThursdaySoothara.pdf" target="_blank">• Soothara</a><br>
+						<a href="media/churchResources/MaundyThursdayEvening.pdf" target="_blank">• Evening</a><br>
+						<a href="media/churchResources/MaundyThursdayManglish.pdf" target="_blank">• Evening (Manglish)</a><br>
+					</p>
+				</div>
+
+				<div class="downloadsTopic-info">
+					<h1>Good Friday</h1>
+					
+					<a onclick="showDownloadsInfo('topic7')">Show More</a>
+					
+					<p class="downloads-info" id="topic7">
+						<a href="media/churchResources/GoodFriday_Manglish.pdf" target="_blank">• Manglish</a><br>
+					</p>
+				</div>
+
+				<div class="downloadsTopic-info">
+					<h1>Easter Service</h1>
+					
+					<a onclick="showDownloadsInfo('topic8')">Show More</a>
+					
+					<p class="downloads-info" id="topic8">
+						<a href="media/churchResources/EasterService_Manglish.pdf" target="_blank">• Manglish</a><br>
+					</p>
+				</div>
+
+				<div class="downloadsTopic-info">
+					<h1>Other Resources</h1>
+					<a onclick="showDownloadsInfo('topic9')">Show More</a>
+					
+					<p class="downloads-info" id="topic9">
+						<a href="media/churchResources/Housewarming_EnglishAndMalayalam.pdf" target="_blank">• House Warming (English & Malayalam)</a><br>
+						<a href="media/churchResources/CommonPrayers.pdf" target="_blank">• Common Prayers</a><br>
+					</p>
+				</div>
 			</div>
-
-			<div class="newsEvents-info">
-				<h1>Good Friday</h1>
-				
-				<a onclick="showEventInfo('event7')">Show More</a>
-				
-				<p class="event-info" id="event7">
-					<a href="media/churchResources/GoodFriday_Manglish.pdf" target="_blank">Manglish</a><br>
-				</p>
-			</div>
-
-			<div class="newsEvents-info">
-				<h1>Easter Service</h1>
-				
-				<a onclick="showEventInfo('event8')">Show More</a>
-				
-				<p class="event-info" id="event8">
-					<a href="media/churchResources/EasterService_Manglish.pdf" target="_blank">Manglish</a><br>
-				</p>
-			</div>
-
-			<div class="newsEvents-info">
-				<h1>Other Resources</h1>
-				
-				<a onclick="showEventInfo('event9')">Show More</a>
-				
-				<p class="event-info" id="event9">
-					<a href="media/churchResources/Housewarming_EnglishAndMalayalam.pdf" target="_blank">House Warming (English & Malayalam)</a><br>
-					<a href="media/churchResources/CommonPrayers.pdf" target="_blank">Common Prayers</a><br>
-				</p>
-			</div>
-
-
+					
 		</div>
-				
 	</div>	
 
 
