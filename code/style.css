@@ -15,6 +15,11 @@ html,body{
 	flex-direction: column;
 }
 
+/* Pushed the footer to the bottom */
+#outer-container{
+	flex: 1;
+}
+
 /* Bigger Display */
 @media only screen and (min-width: 601px) {
 
@@ -152,7 +157,7 @@ html,body{
 
 	/* Styling the user info card */
 	div.person-info{
-		background-color: #d4c48f;
+		background-color: #f3e9c6;;
 		padding: 20px;
 		border-radius: 10px;
 		display: flex;
@@ -455,13 +460,12 @@ html,body{
 	.patronSaint{
 		display: flex;
 		flex-direction: row;
-		/* border: 2px solid black; */
 		padding: 10px;
 		border-radius: 10px;
-		gap: 20px; /* Add spacing between image and text */
-		background-color: #ad0000; /* White background for contrast */
+		/* background-color: #d4c89f; */
+		background-color: #f3e9c6;
 		border-radius: 10px;
-		padding: 20px;
+		padding: 10px;
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 		transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 	}
@@ -476,11 +480,13 @@ html,body{
 		animation: fade 1.5s;
 	}
 
-	/* div.patronSaint-image{ */
-		/* display: flex; */
-		/* width: 30%; */
-		/* border: 2px solid black; */
-	/* } */
+	.patronSaint-image{
+		background-color: inherit;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
 
 	.patronSaint img{
 		border-radius: 10px;
@@ -497,6 +503,7 @@ html,body{
 	}
 
 	div.aboutSaint{
+		background-color: inherit;
 		padding-left: 10px;
 		display: flex;
 		flex-direction: column;
@@ -508,21 +515,23 @@ html,body{
 	.patronSaintName {
 		font-size: 1.8rem;
 		font-weight: bold;
-		color: #940303; /* Match the theme color */
+		color: #AD0000; /* Match the theme color */
 		margin-bottom: 10px;
 		text-align: left;
 	}
 
 	div.patronSaint p{
 		margin-top: 0px;
+		background-color: inherit;
 	}
 
 	/* Styling the Patron Saint's description */
 	.patronSaintInfo {
 		font-size: 1rem;
 		line-height: 1.6;
-		color: #333333; /* Dark gray for readability */
+		color: #000000; /* Dark gray for readability */
 		text-align: justify;
+		background-color: inherit;
 	}
 
     /* Used to style the map and service timing division in contacts page */
@@ -688,8 +697,9 @@ html,body{
 	
 	/* Add a hover effect */
 	.footer .fa:hover {
-		transform: scale(1.5);
+		transform: translateY(-5px);
 		background-color: transparent;
+		text-decoration: none;
 	}
 
 	/* Personal css for the lightbox */
@@ -934,7 +944,6 @@ html,body{
 		background-color: inherit;;
 		height: 100%;
 		align-items: center;
-		
 	}
 
 
@@ -1000,15 +1009,12 @@ html,body{
 		position: relative;
 		float: right;
 		height: 120px;
-		/* background-color: #AD0000; */
-		/* background-color: #940303; */
 		background-color: inherit;
 		width: 35%;
 		font-size: 20px;
 		flex-wrap: wrap;
 		justify-content: space-evenly;
 		align-content: center;
-		/* z-index: 1; */
 	}
 
 	.otherLinks{
@@ -1264,6 +1270,28 @@ html,body{
 		width: 50%;
 	}
 
+	.patronSaint{
+		flex-direction: column;
+	}
+
+	.patronSaintName{
+		font-size: 1.5rem;
+		text-align: center;
+	}
+
+	.patronSaint img{
+		border-radius: 10px;
+		max-width: 100%;
+		max-height: 350px; /* Adjust height for smaller screens */
+		object-fit: cover; /* Ensure the image fits nicely */
+    	margin-right: 0px
+	}
+
+	/* Reverse layout image spacing */
+	.patronSaint-reverse img {
+		margin-right: 0;
+		margin-left: 0px;
+	}
 	
 }
 
@@ -1582,79 +1610,6 @@ html,body{
 		border: 2px solid black;
 	}
 	
-	.patronSaint{
-		display: flex;
-		flex-direction: column;
-		text-align: center;
-		border: 2px solid black;
-		padding: 10px;
-		border-radius: 10px;
-		/* width: 20%; */
-	}
-
-	/* Used to change the flow direction */
-	.patronSaint-reverse{
-		flex-direction: column;
-	}
-
-	/* Fading animation */
-	.fade {
-		animation: fade 1.5s;
-	}
-
-	/* div.patronSaint-image{ */
-		/* display: flex; */
-		/* width: 30%; */
-		/* border: 2px solid black; */
-	/* } */
-
-	div.patronSaint img{
-		width: 100%;
-		border-radius: 10px;
-	}
-
-	div.aboutSaint{
-		/* width: 70%; */
-		padding-left: 10px;
-	}
-
-	div.patronSaint p{
-		margin-top: 0px;
-		text-align: center;
-	}
-
-	p.patronSaintName{
-		font-weight: bolder;
-		font-size: 1.5rem;
-	}
-
-	div.slideshow-patronSaint {
-        padding: 10px;
-    }
-
-    .patronSaint {
-        flex-direction: column; /* Stack image and text vertically */
-        text-align: center;
-    }
-
-    div.patronSaint img {
-        margin: 0 auto 10px auto; /* Center the image */
-        max-width: 100%; /* Make the image responsive */
-    }
-
-    div.aboutSaint {
-        padding: 0;
-    }
-
-    .patronSaintName {
-        font-size: 1.5rem;
-    }
-
-    .patronSaintInfo {
-        font-size: 0.9rem;
-    }
-
-
 	/* To align elements in the division (service timing and location) */
 	div.service_location{
 		display: flex;
@@ -1794,7 +1749,8 @@ html,body{
 
 	/* Styling the user info card */
 	div.person-info{
-		background-color: #d4c48f;
+		/* background-color: #d4c48f; */
+		background-color: #f3e9c6;
 		padding: 20px;
 		border-radius: 10px;
 		display: flex;
@@ -2104,6 +2060,7 @@ html,body{
 
 	/* End of lightbox css */
 
+	
 	/* Hamburger menu */
 	/* Add a grey background color on mouse-over */
 	/* .topnav a:hover {
@@ -2142,6 +2099,94 @@ html,body{
 		color: white;
 		margin-top: 5px;
 	}
+
+	/* Styling for the patron saints slideshow */
+	div.slideshow-patronSaint{	
+		display: flex;
+		border: 2px solid black;
+		display: flex;
+		flex-direction: column; /* Stack slides vertically */
+		gap: 20px; /* Add spacing between slides */
+		background-color: #f1e4bb; /* Match the website's background color */
+		padding: 20px;
+		border-radius: 10px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+		margin: auto;
+		max-width: 1100px; /* Center and limit the width */
+	}
+	
+	.patronSaint{
+		display: flex;
+		flex-direction: column;
+		padding: 10px;
+		border-radius: 10px;
+		background-color: #f3e9c6;;
+		border-radius: 10px;
+		padding: 10px;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+		transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+	}
+
+	/* Fading animation */
+	.fade {
+		animation: fade 1.5s;
+	}
+
+	.patronSaint-image{
+		background-color: inherit;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.patronSaint img{
+		border-radius: 10px;
+		max-width: 250px;
+		max-height: 400px;
+		object-fit: cover; /* Ensure the image fits nicely */
+    	margin-right: 20px; /* Add spacing between image and text */
+	}
+
+	/* Reverse layout image spacing */
+	.patronSaint-reverse img {
+		margin-right: 0;
+		margin-left: 20px;
+	}
+
+	div.aboutSaint{
+		background-color: inherit;
+		padding-left: 10px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 10px;
+	}
+
+	/* Styling the Patron Saint's name */
+	.patronSaintName {
+		font-size: 1.8rem;
+		font-weight: bold;
+		color: #AD0000; /* Match the theme color */
+		margin-bottom: 10px;
+		text-align: center;
+	}
+
+	div.patronSaint p{
+		margin-top: 0px;
+		background-color: inherit;
+		text-align: center;
+	}
+
+	/* Styling the Patron Saint's description */
+	.patronSaintInfo {
+		font-size: 1rem;
+		line-height: 1.6;
+		color: #000000; /* Dark gray for readability */
+		text-align: justify;
+		background-color: inherit;
+	}
+
 	
 	/* Styling for the news and events div and content inside */
 	.news-events, .downloads{
@@ -2269,7 +2314,6 @@ html,body{
 		/* margin: auto; */
 	}
 
-
 	.footer .otherLinks{
 		overflow: hidden;
 		background-color: inherit;
@@ -2285,20 +2329,6 @@ html,body{
 		margin-top: 0px;
 		font-weight: normal;	
 	}	
-
-	/* .video iframe{
-		border: 2px solid black;
-		border-radius: 10px;
-		width:560px; 
-		height:315px;
-	}
-
-	audio {
-		margin-left: 10%;
-		width: 80%;
-		border: 2px solid #525252;
-		border-radius: 30px;
-	} */
 
 	ul {
 		/* background-color: #AD0000; */
