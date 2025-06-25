@@ -1,3 +1,22 @@
+// To refresh the page when the window is maximized
+let lastWidth = window.innerWidth;
+let lastHeight = window.innerHeight;
+
+window.addEventListener('resize', () => {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+
+    // Detect if window dimensions have changed and reload the page
+    if ((width > lastWidth || height > lastHeight)) {
+        // Refresh the page
+        location.reload();
+    }
+
+    lastWidth = width;
+    lastHeight = height;
+});
+
+
 // Function to display the hamburger menu when icon is clicked
 function menuFunction() {
     var menu = document.getElementById("myLinks");
@@ -43,34 +62,34 @@ function menuFunction() {
   }
 
 // To show the container and hide the hamburger navigation menu when the window is resized
-  function showContainer() {
-    var navBar = document.getElementById("navBar");
-    var menu = document.getElementById("myLinks");
-    // var mainContainer = document.getElementById("container");
-    var mainContainer = document.getElementById("outer-container");
-    var slideShowContainer = document.getElementById("slideshow-container");
+function showContainer() {
+  var navBar = document.getElementById("navBar");
+  var menu = document.getElementById("myLinks");
+  
+  // var mainContainer = document.getElementById("container");
+  var mainContainer = document.getElementById("outer-container");
+  var slideShowContainer = document.getElementById("slideshow-container");
+  var btnOpen = document.getElementById("btnOpenMenu");
+  var btnClose = document.getElementById("btnCloseMenu");
 
-    var btnOpen = document.getElementById("btnOpenMenu");
-    var btnClose = document.getElementById("btnCloseMenu");
-
-    // Hiding the menu when the window is resized
-    menu.style.display = "none";
-    
-    // Showing main container when the window is resized
-    mainContainer.style.display = "block";
-    //  This is done because the slideshow container is outside the mainCoontainer
-    slideShowContainer.style.display = "block"; // Shows the slideshow container when the menu is closed. 
+  // Hiding the menu when the window is resized
+  menu.style.display = "none";
+  
+  // Showing main container when the window is resized
+  mainContainer.style.display = "block";
+  //  This is done because the slideshow container is outside the mainCoontainer
+  slideShowContainer.style.display = "block"; // Shows the slideshow container when the menu is closed. 
                                             
     
-    //Showing the btnOpenMenu when the window is resized and page is in mobile view. Done by checking if navigation bar is visible or not
-    if (window.getComputedStyle(navBar).display == "none") {
-      btnOpen.style.display = "inline-block";
-      btnClose.style.display = "none";
-    } else {
-      btnOpen.style.display = "none";
-      btnClose.style.display = "none";
-    }    
-  }
+  //Showing the btnOpenMenu when the window is resized and page is in mobile view. Done by checking if navigation bar is visible or not
+  if (window.getComputedStyle(navBar).display == "none") {
+    btnOpen.style.display = "inline-block";
+    btnClose.style.display = "none";
+  } else {
+    btnOpen.style.display = "none";
+    btnClose.style.display = "none";
+  }    
+}
 
 // Function to display the hamburger menu when icon is clicked and to close it when clicked outside the menu or on the close icon
 function showDropdown(dropDownId) {
