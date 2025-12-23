@@ -6,15 +6,17 @@
 	<meta charset="UTF-8">
 
 	<!-- Used for the icon (on website-tab) -->
-	<link rel="apple-touch-icon" sizes="180x180" href="../media/favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="../media/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="../media/favicon/favicon-16x16.png">
-	<link rel="manifest" href="../media/favicon/site.webmanifest">	
+	<link rel="apple-touch-icon" sizes="180x180" href="/media/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/media/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/media/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/media/favicon/site.webmanifest">
+	<!-- Preloading stylesheet -->
+	<link rel="preload" href="/style.css" as="style">
 	<!-- Linking stylesheet -->
-	<link rel="stylesheet" type="text/css" href="../style.css">
+	<link rel="stylesheet" type="text/css" href="/style.css">
 
 	<!-- Linking JS -->
-	<script src="../script.js"></script>
+	<script src="/script.js"></script>
 
 	 <!-- Hamburger Menu and social media icons -->
 	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
@@ -36,12 +38,11 @@
 
 	<!-- To style the navigation menu and banner -->
 	<div class="header">
-
 		<!-- Banner with logo -->
 		<div id="banner">
-			<img src="../media/churchLogo.png" alt="Church logo" class="churchLogo" id="logo">
-			<a id="logo" href="../index.html">ST. BEHANAN'S INDIAN ORTHODOX CHURCH <br>NORTH WALES</a>
-			<img src="../media/parishLogo.png" alt="Church logo" class="parishLogo" id="logo">
+			<img src="/media/churchLogo.png" alt="Church logo" class="churchLogo" id="logo">
+			<a id="logo" href="./home">ST. BEHANAN'S INDIAN ORTHODOX CHURCH <br>NORTH WALES</a>
+			<img src="/media/parishLogo.png" alt="Parish logo" class="parishLogo" id="logo">
 		</div>
 
 		<!-- Menu icon -->
@@ -58,33 +59,41 @@
 		<div id="navBar" class="navBar">
 			<ul>
 				<!-- Links to other pages -->
-				<li><a class="links" href="../index.html">HOME</a></li>
-				<!-- <li><a href="about.html">ABOUT</a></li> -->
+				<li><a class="links" href="index.html">HOME</a></li>
+				
+				<!-- About link -->
 				<div class="dropdown">
 					<button class="dropbtn">
-						ABOUT<span class="material-symbols-outlined drop_down">arrow_drop_down</span>
+						ABOUT
+						<span class="material-symbols-outlined drop_down">
+							arrow_drop_down
+						</span>
 					</button>
-						<div class="dropdown-content">
-							<a href="../about/church.html">Church</a>
-							<a href="../about/parish.html">Parish</a>
-							<a href="../about/diocese.html">Diocese</a>
-							<a href="../about/officeBearers.html">Management</a>
-						</div>
+					<div class="dropdown-content">
+						<a href="/about/church/">Church</a>
+						<a href="/about/parish/">Parish</a>
+						<a href="/about/diocese/">Diocese</a>
+						<a href="/about/office/">Management</a>
+					</div>
+						
 				</div>
 
-				<!-- <li><a href="organisations.html">ORGANISATIONS</a></li> -->
+				<!-- Organisation pages link -->				
 				<div class="dropdown">
 					<button class="dropbtn">
-						ORGANISATIONS<span class="material-symbols-outlined drop_down">arrow_drop_down</span>
+						ORGANISATIONS
+						<span class="material-symbols-outlined drop_down">
+							arrow_drop_down
+						</span>
 					</button>
-						<div class="dropdown-content">
-							<a href="mmvs.html">MMVS</a>
-							<a href="ocym.html">OCYM</a>
-							<a href="sundaySchool.html">Sunday School</a>
-						</div>
+					<div class="dropdown-content">
+						<a href="/organisations/mmvs/">MMVS</a>
+						<a href="/organisations/ocym/">OCYM</a>
+						<a href="/organisations/sundayschool/">Sunday School</a>
+					</div>
 				</div>
-				<li><a href="../gallery.html">GALLERY</a></li>
-				<li><a href="../contact.html">CONTACT</a></li>
+				<li><a href="/gallery/">GALLERY</a></li>
+				<li><a href="/contact/">CONTACT</a></li>
 			</ul>
 		</div>
 
@@ -95,40 +104,42 @@
 		<!-- Navigation links (hidden by default) -->
 		<div id="myLinks">
 			<!-- Links to other pages -->
-			<a class="links" href="../index.html">HOME</a>
+			<a class="links" href="/home/">HOME</a>
 			
 			<div class="dropdown">
 				<button class="dropbtn" onclick="showDropdown('abtDropdown')">
 					ABOUT
-					<span class="material-symbols-outlined drop_down">
-						arrow_drop_down
+					<span class="material-symbols-outlined drop_down" onclick="showDropdown('abtDropdown')">
+						arrow_drop_down 
 					</span>
 				</button>
 				<div class="dropdown-content" id="abtDropdown">
-					<a href="../about/church.html">Church</a>
-					<a href="../about/parish.html">Parish</a>
-					<a href="../about/diocese.html">Diocese</a>
-					<a href="../about/officeBearers.html">Official Bearers</a>
-				</div>	
+					<a href="/about/church.html">Church</a>
+					<a href="/about/parish.html">Parish</a>
+					<a href="/about/diocese.html">Diocese</a>
+					<a href="/about/officeBearers.html">Official Bearers</a>
+				</div>
 			</div>
 			<div class="dropdown">
 				<button class="dropbtn" onclick="showDropdown('orgDropdown')">
 					ORGANISATIONS
-					<span class="material-symbols-outlined drop_down">
+					<span class="material-symbols-outlined drop_down" onclick="showDropdown('orgDropdown')">
 						arrow_drop_down
 					</span>
 				</button>
 				<div class="dropdown-content" id="orgDropdown">
-					<a href="mmvs.html">MMVS</a>
-					<a href="ocym.html">OCYM</a>
-					<a href="sundaySchool.html">Sunday School</a>
-				</div>	
+					<a href="/organisations/mmvs/">MMVS</a>
+					<a href="/organisations/ocym/">OCYM</a>
+					<a href="/organisations/sundayschool/">Sunday School</a>
+				</div>
+					
 			</div>
 			<!-- <a class="links" href="organisations.html">ORGANISATIONS</a> -->
-			<a class="links" href="../gallery.html">GALLERY</a>
-			<a class="links" href="../contact.html">CONTACT</a>
+			<a class="links" href="/gallery/">GALLERY</a>
+			<a class="links" href="/contact/">CONTACT</a>
 		</div>		
 	</div>
+
 
 	<div id="outer-container">
 		<!--Container where all the information for the pages will go  -->
@@ -148,7 +159,7 @@
 			</div>			
 
 			<br>
-			<img src="../media/organisations/motherMary.jpg" alt="Mother Mary" class="float-center">
+			<img src="/media/organisations/motherMary.jpg" alt="Mother Mary" class="float-center">
 
 			<br>
 			<!-- MMVS Management -->
@@ -156,13 +167,13 @@
 			
 			<div class="officeBearers">
 				<div class="person-info">
-					<img src="../media/rawFiles/personPlaceholder.jpg" alt="HeadTeacher" class="officeBear" id="vicar">
+					<img src="/media/rawFiles/personPlaceholder.jpg" alt="HeadTeacher" class="officeBear" id="vicar">
 					<p class="person-info-name">Sheela Mathew Isaac</p>
 					<p>Trustee</p>
 					<p>2020 - Current</p>
 				</div>
 				<div class="person-info">
-					<img src="../media/rawFiles/personPlaceholder.jpg" alt="HeadTeacher" class="officeBear" id="vicar">
+					<img src="/media/rawFiles/personPlaceholder.jpg" alt="HeadTeacher" class="officeBear" id="vicar">
 					<p class="person-info-name">Rev. Fr. Shaiju K Mathai</p>
 					<p>Secretary</p>
 					<p>2020 - Current</p>
@@ -173,15 +184,15 @@
 			<h2 class="center">Members</h2>
 			<div class="officeBearers">
 				<div class="person-info">
-					<img src="../media/rawFiles/personPlaceholder.jpg" alt="Teacher" class="officeBear" id="secretary">
+					<img src="/media/rawFiles/personPlaceholder.jpg" alt="Teacher" class="officeBear" id="secretary">
 					<p class="person-info-name">Mr. John Doe</p>
 				</div>
 				<div class="person-info">
-					<img src="../media/rawFiles/personPlaceholder.jpg" alt="Teacher" class="officeBear" id="secretary">
+					<img src="/media/rawFiles/personPlaceholder.jpg" alt="Teacher" class="officeBear" id="secretary">
 					<p class="person-info-name">Mr. John Doe</p>
 				</div>
 				<div class="person-info">
-					<img src="../media/rawFiles/personPlaceholder.jpg" alt="Teacher" class="officeBear" id="secretary">
+					<img src="/media/rawFiles/personPlaceholder.jpg" alt="Teacher" class="officeBear" id="secretary">
 					<p class="person-info-name">Mr. John Doe</p>
 				</div>
 			</div>	
@@ -203,11 +214,11 @@
 					Llandudno Junction, LL31 9NS<br>
 				</p>	
 				<a href="mailto:northwalesindianorthodoxchurch@gmail.com" target="_blank">Mail Us</a>		
-				<a href="../contact.html">Contact Page</a>			
+				<a href="/contact/">Contact Page</a>			
 			</div>
 
 			<div id="bannerFooter">
-				<img src="../media/parishLogo.png" alt="Parish logo" class="parishLogo" id="logo">
+				<img src="/media/parishLogo.png" alt="Parish logo" class="parishLogo" id="logo">
 			</div>
 			
 

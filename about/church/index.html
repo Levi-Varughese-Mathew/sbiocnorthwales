@@ -6,15 +6,17 @@
 	<meta charset="UTF-8">
 
 	<!-- Used for the icon (on website-tab) -->
-	<link rel="apple-touch-icon" sizes="180x180" href="../media/favicon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="../media/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="../media/favicon/favicon-16x16.png">
-	<link rel="manifest" href="../media/favicon/site.webmanifest">
+	<link rel="apple-touch-icon" sizes="180x180" href="/media/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/media/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/media/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/media/favicon/site.webmanifest">
+	<!-- Preloading stylesheet -->
+	<link rel="preload" href="/style.css" as="style">
 	<!-- Linking stylesheet -->
-	<link rel="stylesheet" type="text/css" href="../style.css">
+	<link rel="stylesheet" type="text/css" href="/style.css">
 
 	<!-- Linking JS -->
-	<script src="../script.js"></script>
+	<script src="/script.js"></script>
 
 	 <!-- Hamburger Menu and social media icons -->
 	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
@@ -27,8 +29,7 @@
 	<!-- For material symbols and icons-->
 	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
-	
-	<title>Organisations</title>
+	<title>About the Church</title>
 </head>
 
 
@@ -65,22 +66,21 @@
 						ABOUT<span class="material-symbols-outlined drop_down">arrow_drop_down</span>
 					</button>
 						<div class="dropdown-content">
-							<a href="../about/church.html">Church</a>
-							<a href="../about/parish.html">Parish</a>
-							<a href="../about/diocese.html">Diocese</a>
-							<a href="../about/officeBearers.html">Management</a>
+							<a href="church.html">Church</a>
+							<a href="parish.html">Parish</a>
+							<a href="diocese.html">Diocese</a>
+							<a href="officeBearers.html">Management</a>
 						</div>
 				</div>
 
-				<!-- <li><a href="organisations.html">ORGANISATIONS</a></li> -->
 				<div class="dropdown">
 					<button class="dropbtn">
 						ORGANISATIONS<span class="material-symbols-outlined drop_down">arrow_drop_down</span>
 					</button>
 						<div class="dropdown-content">
-							<a href="mmvs.html">MMVS</a>
-							<a href="ocym.html">OCYM</a>
-							<a href="sundaySchool.html">Sunday School</a>
+							<a href="../organisations/mmvs.html">MMVS</a>
+							<a href="../organisations/ocym.html">OCYM</a>
+							<a href="../organisations/sundaySchool.html">Sunday School</a>
 						</div>
 				</div>
 				<li><a href="../gallery.html">GALLERY</a></li>
@@ -99,14 +99,17 @@
 			<!-- <a class="links" href="about.html">ABOUT</a> -->
 			<div class="dropdown">
 				<button class="dropbtn" onclick="showDropdown('abtDropdown')">
-					ABOUT<span class="material-symbols-outlined drop_down">arrow_drop_down</span>
+					ABOUT
+					<span class="material-symbols-outlined drop_down">
+						arrow_drop_down
+					</span>
 				</button>
-				<div class="dropdown-content" id="abtDropdown">
-					<a href="../about/church.html">Church</a>
-					<a href="../about/parish.html">Parish</a>
-					<a href="../about/diocese.html">Diocese</a>
-					<a href="../about/officeBearers.html">Official Bearers</a>
-				</div>	
+					<div class="dropdown-content" id="abtDropdown">
+						<a href="church.html">Church</a>
+						<a href="parish.html">Parish</a>
+						<a href="diocese.html">Diocese</a>
+						<a href="officeBearers.html">Official Bearers</a>
+					</div>
 			</div>
 			<div class="dropdown">
 				<button class="dropbtn" onclick="showDropdown('orgDropdown')">
@@ -116,12 +119,11 @@
 					</span>
 				</button>
 				<div class="dropdown-content" id="orgDropdown">
-					<a href="mmvs.html">MMVS</a>
-					<a href="ocym.html">OCYM</a>
-					<a href="sundaySchool.html">Sunday School</a>
-				</div>	
+					<a href="../organisations/mmvs.html">MMVS</a>
+					<a href="../organisations/ocym.html">OCYM</a>
+					<a href="../organisations/sundaySchool.html">Sunday School</a>
+				</div>
 			</div>
-			<!-- <a class="links" href="organisations.html">ORGANISATIONS</a> -->
 			<a class="links" href="../gallery.html">GALLERY</a>
 			<a class="links" href="../contact.html">CONTACT</a>
 		</div>		
@@ -130,66 +132,51 @@
 	<div id="outer-container">
 		<!--Container where all the information for the pages will go  -->
 		<div id="container">
+			
+			<h1 class="center">The Church</h1>
 
-			<div class="clearfix">
-				<!-- <img src="../media/orgLogo/ocym.jpg" alt="OCYM" class="float-right"> -->
-				<h2 id="sundaySchool" class="center">Sunday School</h2>
+			<!-- <h2 id="Church">Church</h2> -->
+			<img src="../media/about/devalokamAramana.jpg" alt="Church Head Office" class="float-center">
 				<p>
-					Orthodox Syrian Sunday School Association of the East is a spiritual organization functioning in all the parishes of the 
-					Malankara Orthodox Church throughout the world. It takes care of the spiritual nurturing of the children, by bringing 
-					them up in the knowledge and fellowship of Jesus Christ and His Church. The classes are conducted for the children. 
-					It has a separate wing for the Outside Kerala Region (OKR).The classes range from Pre-primary to the twelfth (Vedapraveen Diploma).
-					We follow a curriculum, jointly prepared and published by the Oriental Orthodox Churches which is revised from time to time. 
-					The Vacation Bible School conducted (OVBS) is a very vibrant wing of the O.S.S.A.E. The movement publishes textbooks, devotional 
-					materials, songbooks, songs and animations for the OVBS every year. The headquarters of O.S.S.A.E is located in the complex of the 
-					Devalokom Catholicate Aramana, Kottayam.
+					The Malankara Orthodox Syrian Church, also known as the Indian Orthodox Church, is one of the 
+					ancient Oriental Orthodox Churches, rooted in the apostolic traditions established by St. Thomas
+					the Apostle in A.D. 52. This historic Church, with a lineage spanning nearly two millennia, 
+					represents one of the oldest Christian communities in the world. Its headquarters is located in 
+					Devalokam, Kottayam, Kerala, South India.
 				</p>
+				<p>
+					As a member of the Oriental Orthodox communion, the Malankara Orthodox Syrian Church holds firmly to the 
+					teachings of the early Church and actively engages in ecumenical dialogue to foster Christian unity. It is 
+					also a founding member of the World Council of Churches and plays a vital role in the global Christian 
+					community. Its rich theological and spiritual heritage has significantly influenced the Christian faith and 
+					tradition.
+				</p>
+				<p>
+					The Church's global presence is marked by its numerous dioceses and parishes across continents, 
+					serving the spiritual needs of its faithful. Each diocese is committed to upholding the Church's 
+					apostolic mission through worship, education, community service, and ecumenical outreach, embodying
+					the timeless message of Christ's love and hope for all humanity.
+				</p>
+			<br>			
+			
+			<h2 class="center">Church Metropolitan</h2>
+			<!-- Image of the metropolitan -->
+			<img src="../media/about/metropolitans/baseliosMarthomaMathewsIII.png" alt="H.G Baselios Marthoma Mathews III" class="float-center">
 
-				<br>
-				<img src="../media/organisations/sundaySchool/christAndChildren.jpg" alt="Christ and Children" class="float-center">
-				<br>
-
-				<!-- Church Management -->
-				<h2 class="center">Management</h2>
-				<!-- Vicar -->
-				<div class="officeBearers">
-					<div class="person-info">
-						<img src="../media/rawFiles/personPlaceholder.jpg" alt="HeadTeacher" class="officeBear" id="vicar">
-						<p class="person-info-name">Rev. Fr. Shaiju K Mathai</p>
-						<p>Head Teacher</p>
-						<p>2020 - Current</p>
-					</div>
-				</div>
-
-				<h2 class="center">Teachers</h2>
-				<div class="officeBearers">
-				<div class="person-info">
-					<img src="../media/rawFiles/personPlaceholder.jpg" alt="Teacher" class="officeBear" id="secretary">
-					<p class="person-info-name">Mr. John Doe</p>
-					<p>Teacher</p>
-					<p>2024-25</p>
-				</div>
-				<div class="person-info">
-					<img src="../media/rawFiles/personPlaceholder.jpg" alt="Teacher" class="officeBear" id="secretary">
-					<p class="person-info-name">Mr. John Doe</p>
-					<p>Teacher</p>
-					<p>2024-25</p>
-				</div>
-				<div class="person-info">
-					<img src="../media/rawFiles/personPlaceholder.jpg" alt="Teacher" class="officeBear" id="secretary">
-					<p class="person-info-name">Mr. John Doe</p>
-					<p>Teacher</p>
-					<p>2024-25</p>
-				</div>
-			</div>
-			</div>
-
-
+				<p>
+					Baselios Marthoma Mathews III is the current Catholicos of the East and Malankara Metropolitan, 
+					primate of the Malankara Orthodox Syrian Church. He was enthroned as the 22nd Malankara
+					Metropolitan on October 14, 2021, and as the 9th Catholicos on October 15, 2021, at St. Peter
+					and St. Paul's Church, Parumala. He succeeded Baselios Marthoma Paulose II. His leadership 
+					guides the Church in its spiritual mission and engagement with contemporary issues. He is 
+					actively involved in promoting ecumenical dialogue and fostering interfaith relations. His 
+					tenure focuses on strengthening the Church's educational institutions and social outreach 
+					programs, continuing the service and community engagement tradition that characterises the 
+					Malankara Church.
+				</p>
 		</div>	
-		<br>
-
-	</div>
 	
+	</div>
 
 	<!-- Main footer to hold other inner divisions -->
 	<!-- Extends to the width of the viewport -->
@@ -207,11 +194,12 @@
 				<a href="../contact.html">Contact Page</a>			
 			</div>
 
+			
+
 			<div id="bannerFooter">
 				<img src="../media/parishLogo.png" alt="Parish logo" class="parishLogo" id="logo">
 			</div>
 			
-
 			<!-- Division for the social media handles -->
 			<div class="socialMediaIcons">
 				<a href="https://www.facebook.com/share/1H2VVZJaKW/?mibextid=wwXIfr" class="fa fa-facebook" target="_blank"></a>
@@ -222,6 +210,8 @@
 		</div>
 		
 	</div>
+
 </body>
 
 </html>
+

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+
+	<!-- Used for the icon (on website-tab) -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/media/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/media/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/media/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/media/favicon/site.webmanifest">
+	<!-- Preloading stylesheet -->
+	<link rel="preload" href="/style.css" as="style">
+	<!-- Linking stylesheet -->
+	<link rel="stylesheet" type="text/css" href="/style.css">
+
+	<!-- Linking JS -->
+	<script src="/script.js"></script>
+
+	 <!-- Hamburger Menu and social media icons -->
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+	<!-- Adding poppins font family (embedded from google fonts) -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+	<!-- For material symbols and icons-->
+	<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+	
+	<title>Organisations</title>
+</head>
+
+
+<body onresize="showContainer()">
+
+	<!-- To style the navigation menu and banner -->
+	<div class="header">
+		<!-- Banner with logo -->
+		<div id="banner">
+			<img src="/media/churchLogo.png" alt="Church logo" class="churchLogo" id="logo">
+			<a id="logo" href="./home">ST. BEHANAN'S INDIAN ORTHODOX CHURCH <br>NORTH WALES</a>
+			<img src="/media/parishLogo.png" alt="Parish logo" class="parishLogo" id="logo">
+		</div>
+
+		<!-- Menu icon -->
+		<span id="btnOpenMenu" class="material-symbols-outlined" onclick="menuFunction()">
+			menu
+		</span> 
+
+		<!-- Close menu icon -->
+		<span id="btnCloseMenu" class="material-symbols-outlined" onclick="menuFunction()">
+			close
+		</span> 
+
+		<!-- Navigation bar for wider displays -->
+		<div id="navBar" class="navBar">
+			<ul>
+				<!-- Links to other pages -->
+				<li><a class="links" href="index.html">HOME</a></li>
+				
+				<!-- About link -->
+				<div class="dropdown">
+					<button class="dropbtn">
+						ABOUT
+						<span class="material-symbols-outlined drop_down">
+							arrow_drop_down
+						</span>
+					</button>
+					<div class="dropdown-content">
+						<a href="/about/church/">Church</a>
+						<a href="/about/parish/">Parish</a>
+						<a href="/about/diocese/">Diocese</a>
+						<a href="/about/office/">Management</a>
+					</div>
+						
+				</div>
+
+				<!-- Organisation pages link -->				
+				<div class="dropdown">
+					<button class="dropbtn">
+						ORGANISATIONS
+						<span class="material-symbols-outlined drop_down">
+							arrow_drop_down
+						</span>
+					</button>
+					<div class="dropdown-content">
+						<a href="/organisations/mmvs/">MMVS</a>
+						<a href="/organisations/ocym/">OCYM</a>
+						<a href="/organisations/sundayschool/">Sunday School</a>
+					</div>
+				</div>
+				<li><a href="../gallery/">GALLERY</a></li>
+				<li><a href="../contact/">CONTACT</a></li>
+			</ul>
+		</div>
+
+	</div>
+
+	<!-- Hamburger Menu -->
+	<div class="topnav">
+		<!-- Navigation links (hidden by default) -->
+		<div id="myLinks">
+			<!-- Links to other pages -->
+			<a class="links" href="index.html">HOME</a>
+			
+			<div class="dropdown">
+				<button class="dropbtn" onclick="showDropdown('abtDropdown')">
+					ABOUT
+					<span class="material-symbols-outlined drop_down" onclick="showDropdown('abtDropdown')">
+						arrow_drop_down 
+					</span>
+				</button>
+				<div class="dropdown-content" id="abtDropdown">
+					<a href="about/church.html">Church</a>
+					<a href="about/parish.html">Parish</a>
+					<a href="about/diocese.html">Diocese</a>
+					<a href="about/officeBearers.html">Official Bearers</a>
+				</div>
+			</div>
+			<div class="dropdown">
+				<button class="dropbtn" onclick="showDropdown('orgDropdown')">
+					ORGANISATIONS
+					<span class="material-symbols-outlined drop_down" onclick="showDropdown('orgDropdown')">
+						arrow_drop_down
+					</span>
+				</button>
+				<div class="dropdown-content" id="orgDropdown">
+					<a href="../organisations/mmvs/">MMVS</a>
+					<a href="../organisations/ocym/">OCYM</a>
+					<a href="../organisations/sundayschool/">Sunday School</a>
+				</div>
+					
+			</div>
+			<!-- <a class="links" href="organisations.html">ORGANISATIONS</a> -->
+			<a class="links" href="../gallery/">GALLERY</a>
+			<a class="links" href="../contact/">CONTACT</a>
+		</div>		
+	</div>
+
+	
+	<div id="outer-container">
+		<!--Container where all the information for the pages will go  -->
+		<div id="container">
+
+			<div class="clearfix">
+				<!-- <img src="/media/orgLogo/ocym.jpg" alt="OCYM" class="float-right"> -->
+				<h2 id="sundaySchool" class="center">Sunday School</h2>
+				<p>
+					Orthodox Syrian Sunday School Association of the East is a spiritual organization functioning in all the parishes of the 
+					Malankara Orthodox Church throughout the world. It takes care of the spiritual nurturing of the children, by bringing 
+					them up in the knowledge and fellowship of Jesus Christ and His Church. The classes are conducted for the children. 
+					It has a separate wing for the Outside Kerala Region (OKR).The classes range from Pre-primary to the twelfth (Vedapraveen Diploma).
+					We follow a curriculum, jointly prepared and published by the Oriental Orthodox Churches which is revised from time to time. 
+					The Vacation Bible School conducted (OVBS) is a very vibrant wing of the O.S.S.A.E. The movement publishes textbooks, devotional 
+					materials, songbooks, songs and animations for the OVBS every year. The headquarters of O.S.S.A.E is located in the complex of the 
+					Devalokom Catholicate Aramana, Kottayam.
+				</p>
+
+				<br>
+				<img src="/media/organisations/sundaySchool/christAndChildren.jpg" alt="Christ and Children" class="float-center">
+				<br>
+
+				<!-- Church Management -->
+				<h2 class="center">Management</h2>
+				<!-- Vicar -->
+				<div class="officeBearers">
+					<div class="person-info">
+						<img src="/media/rawFiles/personPlaceholder.jpg" alt="HeadTeacher" class="officeBear" id="vicar">
+						<p class="person-info-name">Rev. Fr. Shaiju K Mathai</p>
+						<p>Head Teacher</p>
+						<p>2020 - Current</p>
+					</div>
+				</div>
+
+				<h2 class="center">Teachers</h2>
+				<div class="officeBearers">
+				<div class="person-info">
+					<img src="/media/rawFiles/personPlaceholder.jpg" alt="Teacher" class="officeBear" id="secretary">
+					<p class="person-info-name">Mr. John Doe</p>
+					<p>Teacher</p>
+					<p>2024-25</p>
+				</div>
+				<div class="person-info">
+					<img src="/media/rawFiles/personPlaceholder.jpg" alt="Teacher" class="officeBear" id="secretary">
+					<p class="person-info-name">Mr. John Doe</p>
+					<p>Teacher</p>
+					<p>2024-25</p>
+				</div>
+				<div class="person-info">
+					<img src="/media/rawFiles/personPlaceholder.jpg" alt="Teacher" class="officeBear" id="secretary">
+					<p class="person-info-name">Mr. John Doe</p>
+					<p>Teacher</p>
+					<p>2024-25</p>
+				</div>
+			</div>
+			</div>
+
+
+		</div>	
+		<br>
+
+	</div>
+	
+
+	<!-- Main footer to hold other inner divisions -->
+	<!-- Extends to the width of the viewport -->
+	<div class="footer">
+
+		<!-- Fixed width -->
+		<div class="subFooter">
+			<div class="otherLinks">
+				<p id="otherLinks">
+					St.Michael & All Angels Church<br>
+					Glyn Y Marl Road<br>
+					Llandudno Junction, LL31 9NS<br>
+				</p>	
+				<a href="mailto:northwalesindianorthodoxchurch@gmail.com" target="_blank">Mail Us</a>		
+				<a href="../contact.html">Contact Page</a>			
+			</div>
+
+			<div id="bannerFooter">
+				<img src="/media/parishLogo.png" alt="Parish logo" class="parishLogo" id="logo">
+			</div>
+			
+
+			<!-- Division for the social media handles -->
+			<div class="socialMediaIcons">
+				<a href="https://www.facebook.com/share/1H2VVZJaKW/?mibextid=wwXIfr" class="fa fa-facebook" target="_blank"></a>
+				<a href="#" class="fa fa-twitter"></a>
+				<a href="#" class="fa fa-instagram"></a>
+				
+			</div>	
+		</div>
+		
+	</div>
+</body>
+
+</html>
