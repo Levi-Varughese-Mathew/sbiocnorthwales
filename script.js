@@ -37,6 +37,7 @@ window.addEventListener('resize', () => {
         // 3. Only reload if the width actually changed and movement stopped
         if (currentWidth !== lastWidth) {
             // Refresh the page
+            console.log("Window width changed from "+lastWidth+" to "+currentWidth+". Reloading the page.");
             location.reload();
         }
         // Update the lastWidth variable
