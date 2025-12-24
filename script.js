@@ -305,6 +305,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let i; // Loop variable
   
+    // If the slides doesnt exist, return
+    if (verseSlides.length == 0) {
+      return;
+    }
   
     // let dots = document.getElementsByClassName("dot");
     // Hiding all slides initially
@@ -334,7 +338,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (patronSlides.length == 0) {
       return;
     }
-    
+
     // Hiding all slides initially
     for (j = 0; j < patronSlides.length; j++) {
       patronSlides[j].style.display = "none";
