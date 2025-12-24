@@ -16,16 +16,33 @@
 //     lastHeight = height;
 // });
 
+// To refresh the page when the window is resized (only width change)
+// Height changes are ignored since there was a bug and android where the focus on input fields caused height changes and the keyboard opening caused unwanted reloads and refreshes which led
+// to bad user experience (as keyboard would close on refresh)
+
+// Debounce implementation to avoid multiple reloads during resizing
 let lastWidth = window.innerWidth;
+let timeout;
 
 window.addEventListener('resize', () => {
-    const currentWidth = window.innerWidth;
+    // 1. Clear the timer every time the window moves
+    clearTimeout(timeout);
 
-    if (currentWidth !== lastWidth) {
-        location.reload();
-    }
+    // 2. Set a new timer
+    // setTemout ( { code to run } , delay = 250ms)
+    timeout = setTimeout(() => {
+        // Get the current width
+        const currentWidth = window.innerWidth;
 
-    lastWidth = currentWidth;
+        // 3. Only reload if the width actually changed and movement stopped
+        if (currentWidth !== lastWidth) {
+            // Refresh the page
+            location.reload();
+        }
+        // Update the lastWidth variable
+        lastWidth = currentWidth;
+      
+    }, 250); // 250ms delay
 });
 
 
