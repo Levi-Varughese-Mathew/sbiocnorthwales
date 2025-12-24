@@ -37,7 +37,6 @@ window.addEventListener('resize', () => {
         // 3. Only reload if the width actually changed and movement stopped
         if (currentWidth !== lastWidth) {
             // Refresh the page
-            console.log("Window width changed from "+lastWidth+" to "+currentWidth+". Reloading the page.");
             location.reload();
         }
         // Update the lastWidth variable
@@ -124,7 +123,7 @@ function showContainer() {
 // Function to display the hamburger menu when icon is clicked and to close it when clicked outside the menu or on the close icon
 function showDropdown(dropDownId) {
   // Test message to check if the function is called
-  console.log("showDropdown function called");
+  // console.log("showDropdown function called");
 
   // Get the dropdown element
   var dropDown = document.getElementById(dropDownId);
@@ -178,7 +177,7 @@ var slideIndex = 1;
 var slideLength = 0;
 
 function openModal(eventClass) {
-  // console.log("openModal function called");
+ 
   document.getElementById("myModal").style.display = "flex";
 
   // Assigning a global variable to the current event
@@ -186,13 +185,13 @@ function openModal(eventClass) {
 
   // Hiding all dots (row images) initially
   var dots = document.getElementsByClassName("demo");
-  // console.log("Hiding all dots initially");
+  
   for (i = 0; i < dots.length; i++) {
     dots[i].style.display = "none";
   }
   //Showing the dots (row images) for the current event
   var eventDots = document.getElementsByClassName("demo "+eventClass);
-  // console.log("Showing the dots for the current event");
+
   for (i = 0; i < eventDots.length; i++) {
     eventDots[i].style.display = "block";
   }
@@ -212,7 +211,7 @@ function closeModal() {
   //Clearing the slide index and variables
   // slideIndex = 1;
   // eventClass = "";
-  // console.log("Close modal function called");
+
 }
 
 function plusSlides(n) {
@@ -275,7 +274,6 @@ function showSlides(n, eventClass) {
 
   // Removing active class from all dots (row images)
   for (i = 0; i < dots.length; i++) {
-    // console.log("Removing active class from all dots");
     dots[i].className = dots[i].className.replace(" active", "");
   }  
   // Adding active class to the current row image (dot)
@@ -291,7 +289,6 @@ function showSlides(n, eventClass) {
 //Function to show the slides in the verse section
 //Ensuring that verseSlides is defined when the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
-  // console.log("DOM fully loaded and parsed");
   let verseSlides = document.getElementsByClassName("verseSlides"); // Used for bible verse slideshow
   let patronSlides = document.getElementsByClassName("patronSaint"); //Used for patron saint divs
 
@@ -305,12 +302,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to show the slides in the verse section (based on slide number with delay)
   function showSlidesVerse() {
-    console.log("showSlidesVerse function called");
-  
+
     let i; // Loop variable
-    // if (verseSlides.length == 1) {
-    //   console.log("No verse slides found");
-    // }
+  
   
     // let dots = document.getElementsByClassName("dot");
     // Hiding all slides initially
@@ -336,10 +330,14 @@ document.addEventListener("DOMContentLoaded", function () {
   function showPatronSaints(){  
     let j; 
 
+    // If the slides doesnt exist, return
+    if (patronSlides.length == 0) {
+      return;
+    }
+    
     // Hiding all slides initially
     for (j = 0; j < patronSlides.length; j++) {
       patronSlides[j].style.display = "none";
-      console.log("Hidden")
     }
     //Incrementing the slide index
     patronSlideIndex++;
@@ -354,11 +352,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-
 // Function to show the info of the news/event in the home page
 function showEventInfo(eventInfo) {
-  // console.log("showInfo function called");
-  console.log(eventInfo);
+  // Displaying the event info
   var eventInfo = document.getElementById(eventInfo);
   if (eventInfo.classList.contains("show")) {
     eventInfo.classList.remove("show");
@@ -369,8 +365,7 @@ function showEventInfo(eventInfo) {
 
 // Function to show the info of the news/event in the home page
 function showDownloadsInfo(downloadsInfo) {
-  // console.log("showInfo function called");
-  console.log(downloadsInfo);
+  // Displaying the event info
   var downloadsInfo = document.getElementById(downloadsInfo);
   if (downloadsInfo.classList.contains("show")) {
     downloadsInfo.classList.remove("show");
