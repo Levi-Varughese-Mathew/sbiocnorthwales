@@ -1,19 +1,31 @@
 // To refresh the page when the window is maximized
+// let lastWidth = window.innerWidth;
+// let lastHeight = window.innerHeight;
+
+// window.addEventListener('resize', () => {
+//     const width = window.innerWidth;
+//     const height = window.innerHeight;
+
+//     // Detect if window dimensions have changed and reload the page
+//     if ((width > lastWidth || height > lastHeight)) {
+//         // Refresh the page
+//         location.reload();
+//     }
+
+//     lastWidth = width;
+//     lastHeight = height;
+// });
+
 let lastWidth = window.innerWidth;
-let lastHeight = window.innerHeight;
 
 window.addEventListener('resize', () => {
-    const width = window.innerWidth;
-    const height = window.innerHeight;
+    const currentWidth = window.innerWidth;
 
-    // Detect if window dimensions have changed and reload the page
-    if ((width > lastWidth || height > lastHeight)) {
-        // Refresh the page
+    if (currentWidth !== lastWidth) {
         location.reload();
     }
 
-    lastWidth = width;
-    lastHeight = height;
+    lastWidth = currentWidth;
 });
 
 
